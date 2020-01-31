@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+<item
+    android:id="@+id/elektron_xidmet"
+android:enabled="true"
+        android:icon="@drawable/menu_ico"
+android:title="Elektron xidmətlər"
+android:showAsAction="ifRoom"/>
+    <item
+    android:id="@+id/profile"
+        
+android:enabled="true"
+        android:icon="@drawable/profil_ico"
+android:title="Profil"
+android:showAsAction="ifRoom"
+        />
+    <item
+    android:id="@+id/emergency"
+android:enabled="true"
+        android:icon="@drawable/hospital_ico"
+android:title="Təcili yardım"
+android:showAsAction="ifRoom"/>
+
+</menu>

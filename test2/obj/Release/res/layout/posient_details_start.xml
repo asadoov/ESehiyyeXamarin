@@ -1,0 +1,4 @@
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" xmlns:android="http://schemas.android.com/apk/res/android">
+  
+    &gt;
+	<TextView android:text="Axtarışa başlamaq üçün axtarış parametrlərini daxil edin" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="match_parent" android:layout_height="wrap_content" android:minWidth="25px" android:minHeight="25px" android:id="@+id/textView1" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:gravity="center" /><Button android:layout_marginTop="20dp" android:gravity="center" android:layout_marginLeft="100dp" android:layout_marginRight="100dp" android:text="Axtarış parametrləri" android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/button1" android:background="#66ccff" android:textColor="@android:color/white" /></LinearLayout>

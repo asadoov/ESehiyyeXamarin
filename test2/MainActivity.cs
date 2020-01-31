@@ -1,0 +1,119 @@
+﻿using Android.App;
+using Android.OS;
+using Android.Widget;
+using Newtonsoft.Json;
+using System.Collections.Generic;
+using Android.Content;
+using Android.Views;
+using AlertDialog = Android.App.AlertDialog;
+using Xamarin.Essentials;
+using ESehiyye.model;
+
+namespace ESehiyye
+{
+    [Activity(Label = "@string/app_name", Theme = "@android:style/Theme.DeviceDefault.NoActionBar", MainLauncher = true)]
+    public class MainActivity : Activity
+    {
+
+        EditText mail, pass;
+
+        protected override async void OnCreate(Bundle savedInstanceState)
+        {
+            var current = Connectivity.NetworkAccess;
+         
+            base.OnCreate(savedInstanceState);
+
+           
+            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+            // Set our view from the "main" layout resource
+
+            SetContentView(Resource.Layout.activity_main);
+
+            if (current == NetworkAccess.Internet)
+            {
+
+
+                FindViewById<FrameLayout>(Resource.Id.progressBarHolder).Visibility = ViewStates.Gone;
+                model.db_select select = new model.db_select();
+                mail = FindViewById<EditText>(Resource.Id.mail);
+                pass = FindViewById<EditText>(Resource.Id.pass);
+                var savedMail = Preferences.Get("cypher1", "");
+                var savedPass = Preferences.Get("cypher2", "");
+                var savedUserData = Preferences.Get("user_data", "");
+                if (savedMail != "" && savedPass != ""&&  savedUserData!= "")
+                {
+                    FindViewById<FrameLayout>(Resource.Id.progressBarHolder).Visibility = ViewStates.Visible;
+                   
+                    List<model.users> user_data = new List<model.users>();
+                    user_data = JsonConvert.DeserializeObject<List<model.users>>(Preferences.Get("user_data", ""));
+                   
+
+                        Intent next = new Intent(this, typeof(ProfileActivity));
+
+                        StartActivity(next);
+                        FindViewById<Button>(Resource.Id.button1).Text = "Daxil ol";
+                        FindViewById<Button>(Resource.Id.button1).Enabled = true;
+                    FindViewById<FrameLayout>(Resource.Id.progressBarHolder).Visibility = ViewStates.Gone;
+
+                }
+                   
+                
+                FindViewById<Button>(Resource.Id.button1).Click += async delegate
+                {
+                    FindViewById<FrameLayout>(Resource.Id.progressBarHolder).Visibility = ViewStates.Visible;
+                    FindViewById<Button>(Resource.Id.button1).Enabled = false;
+                    FindViewById<Button>(Resource.Id.button1).Text = "Yüklənir...";
+
+                    List<Cypher> cypher;
+
+                    cypher = await select.SignIn(mail.Text, pass.Text);
+                    if (!string.IsNullOrEmpty(cypher[0].cypher1) && !string.IsNullOrEmpty(cypher[0].cypher2))
+                    {
+
+
+
+
+
+
+                        List<model.users> user_data = new List<model.users>();
+                        user_data = await select.UserAsync(cypher[0].cypher1, cypher[0].cypher2);
+                        if (user_data.Count > 0)
+                        {
+
+                            Intent next = new Intent(this, typeof(ProfileActivity));
+
+                            StartActivity(next);
+                            FindViewById<Button>(Resource.Id.button1).Text = "Daxil ol";
+                            FindViewById<Button>(Resource.Id.button1).Enabled = true;
+                            FindViewById<FrameLayout>(Resource.Id.progressBarHolder).Visibility = ViewStates.Gone;
+                            
+                            Preferences.Set("user_data", JsonConvert.SerializeObject(user_data));
+                            Preferences.Set("cypher1", cypher[0].cypher1);
+                            Preferences.Set("cypher2", cypher[0].cypher2);
+                        }
+                        else
+                        {
+                            FindViewById<FrameLayout>(Resource.Id.progressBarHolder).Visibility = ViewStates.Gone;
+                            AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+                            alertDialog.SetTitle("Bildiriş");
+                            alertDialog.SetMessage("Email və ya şifrənin düzgünlüyünə diqqət edin");
+                            alertDialog.Show();
+                            // Toast.MakeText(ApplicationContext, "email ve ya shifre yalnishdir", ToastLength.Long).Show();
+                            FindViewById<Button>(Resource.Id.button1).Text = "Daxil ol";
+                            FindViewById<Button>(Resource.Id.button1).Enabled = true;
+                        }
+
+                    }
+                };
+            }
+            else
+            {
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+                alertDialog.SetTitle("Bildiriş");
+                alertDialog.SetMessage("Lütfən şəbəkə bağlantınızı yoxlayın");
+                alertDialog.Show();
+            }
+        }
+       
+    }
+}

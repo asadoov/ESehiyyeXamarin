@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+
+    >
+	<android.support.v7.widget.Toolbar
+		android:id="@+id/toolbar2"
+		android:background="#66ccff"
+		android:layout_width="match_parent"
+		android:layout_height="?attr/actionBarSize"
+		app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+		app:layout_collapseMode="pin"
+       
+                >
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<TextView
+				android:id="@+id/toolbar_title"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerHorizontal="true"
+				android:layout_centerVertical="true"
+				android:text="Axtarış parametrləri"
+				android:textColor="@android:color/white"
+				android:textStyle="bold"
+				android:textSize="25dp"
+                />
+
+
+
+		</RelativeLayout>
+
+	</android.support.v7.widget.Toolbar>
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="center"
+    >
+		<Button
+			android:layout_marginLeft="10dp"
+			android:background="@android:color/transparent"
+			android:text="Regionu daxil edin..."
+			android:gravity="left"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/button1" />
+		<Button
+			android:enabled="false"
+			android:background="@android:color/transparent"
+			android:layout_marginLeft="10dp"
+			android:gravity="left"
+			android:text="Tibb müəssisəsini daxil edin..."
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/button2" />
+		<EditText
+            android:hint="Həkimin adını daxil edin..."
+			android:inputType="textPersonName"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/editText1" />
+        <EditText
+            android:hint="Həkimin soyadın daxil edin..."
+			android:inputType="textPersonName"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/editText2" />
+		<Button
+
+			android:layout_marginTop="50dp"
+			android:background="#6633cc"
+			android:textColor="@android:color/white"
+			android:text="Axtar"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/button3" />
+
+
+	</LinearLayout>
+
+</LinearLayout>

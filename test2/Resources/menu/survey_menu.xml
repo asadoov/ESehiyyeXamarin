@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   
+    >
+  <item
+      android:id="@+id/surveys_by_doc"
+  android:enabled="true"
+        
+  android:title="Həkim müayinələri"
+  android:showAsAction="ifRoom"/>
+  <item
+  android:id="@+id/helper_surveys"
+        
+android:enabled="true"
+     
+android:title="Köməkçi müayinələr"
+android:showAsAction="ifRoom"
+        />
+  <item
+  android:id="@+id/diagnosis"
+android:enabled="true"
+     
+android:title="Diaqnozlar"
+android:showAsAction="ifRoom"/>
+
+</menu>

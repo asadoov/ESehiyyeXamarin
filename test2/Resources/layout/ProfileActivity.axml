@@ -1,0 +1,214 @@
+﻿
+<android.support.design.widget.CoordinatorLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:p1="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+    >
+
+     <android.support.design.widget.AppBarLayout android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:fitsSystemWindows="true">  
+        <android.support.design.widget.CollapsingToolbarLayout
+         
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:fitsSystemWindows="true"
+            app:contentScrim="#66ccff"
+            android:background="#66ccff"
+            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleMarginEnd="64dp">
+
+             
+            <android.support.v7.widget.GridLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="#66ccff"
+			app:columnCount="2"
+			app:rowCount="2"
+			android:id="@+id/gridLayout1"
+			android:minWidth="25px"
+			android:minHeight="25px">
+               
+
+                  
+            <refractored.controls.CircleImageView
+   app:layout_columnSpan="2"
+                    app:layout_gravity="center"
+				android:layout_marginTop="10dp"
+				android:id="@+id/user_image"
+				android:layout_width="150dp"
+				android:layout_height="150dp"
+				app:civ_border_width="2dp"
+                android:fitsSystemWindows="true"
+				app:civ_border_color="@android:color/black"
+                   
+                    />
+                 
+            <TextView
+                    app:layout_columnSpan="2"
+			android:text="Large Text"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:gravity="center_horizontal"
+			android:layout_width="match_parent"
+	
+			android:id="@+id/user_name"
+			android:background="#66ccff"
+                 android:layout_height="match_parent"
+			
+		
+
+                />
+			<TextView
+                    app:layout_columnSpan="2"
+				android:text="Large Text"
+				android:textAppearance="?android:attr/textAppearanceSmall"
+				android:gravity="center_horizontal"
+				android:id="@+id/user_details"
+                android:layout_height="match_parent"
+				android:layout_width="match_parent"
+				android:background="#66ccff"/>
+
+                  </android.support.v7.widget.GridLayout>  
+          
+            <android.support.v7.widget.Toolbar android:id="@+id/toolbar"  android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" app:popupTheme="@style/ThemeOverlay.AppCompat.Light" app:layout_collapseMode="pin"
+                ></android.support.v7.widget.Toolbar>
+            
+            </android.support.design.widget.CollapsingToolbarLayout>  
+    </android.support.design.widget.AppBarLayout>  
+
+   
+
+	<android.support.v4.widget.NestedScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:clipToPadding="false"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior"
+         android:paddingBottom="56dp"
+        >
+
+
+		<android.support.v7.widget.GridLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="#ffff"
+			app:columnCount="2"
+			app:rowCount="2"
+			android:id="@+id/gridLayout1"
+			android:minWidth="25px"
+			android:minHeight="25px">
+
+           
+            <Button
+                  android:drawableTop="@drawable/_2"
+				p1:text="Randevuya yazılanlar"
+				p1:id="@+id/button1"
+				app:layout_rowSpan="1"
+				app:layout_rowWeight="1"
+				android:layout_height="200dp"
+				app:layout_columnWeight="1"
+		android:layout_width="10dp"
+               
+           
+            />
+			<Button
+                  android:drawableTop="@drawable/_2"
+				p1:text="Posientə baxış"
+				p1:id="@+id/button2"
+				app:layout_rowSpan="1"
+				app:layout_rowWeight="1"
+				android:layout_height="200dp"
+				app:layout_columnWeight="1"
+		android:layout_width="10dp"
+               
+           
+            />
+            <Button
+                  android:drawableTop="@drawable/_5"
+				p1:text="Həkim axtarışı və randevu"
+				p1:id="@+id/button3"
+				app:layout_rowSpan="1"
+				app:layout_rowWeight="1"
+				android:layout_height="200dp"
+				app:layout_columnWeight="1"
+		android:layout_width="10dp"
+           
+            />
+			<Button
+                  android:drawableTop="@drawable/_3"
+				p1:text="Randevularım"
+				p1:id="@+id/button4"
+				app:layout_rowWeight="1"
+				android:layout_height="200dp"
+				app:layout_rowSpan="1"
+				app:layout_columnWeight="1"
+                android:layout_width="10dp"
+				/>
+            <Button
+                android:drawableTop="@drawable/_7"
+				p1:text="Tibb müəssisələrinə müraciətlərim"
+				p1:id="@+id/button5"
+				android:layout_height="200dp"
+				app:layout_rowWeight="1"
+				app:layout_rowSpan="1"
+				app:layout_columnWeight="1"
+                android:layout_width="10dp"/>
+            <Button
+                  android:drawableTop="@drawable/_1"
+				p1:text="Tibbi arayışlarım"
+				p1:id="@+id/button6"
+				app:layout_rowSpan="1"
+				app:layout_rowWeight="1"
+				android:layout_height="200dp"
+				app:layout_columnWeight="1"
+		android:layout_width="10dp"
+             />
+			<Button
+                  android:drawableTop="@drawable/_6"
+				
+				p1:text="Xəstəliklərim"
+				p1:id="@+id/button7"
+				app:layout_rowSpan="1"
+				android:layout_height="200dp"
+				app:layout_rowWeight="1"
+				app:layout_columnWeight="1"
+                android:layout_width="10dp"/>
+            <Button
+                  android:drawableTop="@drawable/_4"
+				p1:text="Uşaqlarım"
+				p1:id="@+id/button8"
+				app:layout_rowWeight="1"
+				android:layout_height="200dp"
+				app:layout_rowSpan="1"
+				app:layout_columnWeight="1"
+                android:layout_width="10dp"/>
+
+
+		</android.support.v7.widget.GridLayout>
+
+	</android.support.v4.widget.NestedScrollView>
+
+        <android.support.design.widget.BottomNavigationView
+		android:id="@+id/bottom_navigation"
+		android:layout_gravity="bottom"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		app:itemBackground="@color/colorPrimary"
+		app:itemIconTint="@android:color/white"
+		app:itemTextColor="@android:color/white"
+		app:menu="@menu/bottom_nav"
+     
+        >
+
+	</android.support.design.widget.BottomNavigationView>
+</android.support.design.widget.CoordinatorLayout>

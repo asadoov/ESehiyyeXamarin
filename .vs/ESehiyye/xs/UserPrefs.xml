@@ -1,0 +1,39 @@
+﻿<Properties StartupConfiguration="{DCEC58C5-131E-4C80-AC28-613B3917AF6F}|Default">
+  <MonoDevelop.Ide.ItemProperties.ESehiyye AndroidDesignerPreferredTheme="AppTheme" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="test2/Resources/layout/activity_main.axml">
+    <Files>
+      <File FileName="test2/Resources/layout/activity_main.axml" Line="33" Column="26" />
+      <File FileName="test2/Resources/layout/gradient.xml" Line="3" Column="5" />
+      <File FileName="test2/Resources/layout/ProfileActivity.axml" Line="33" Column="24" />
+      <File FileName="test2/Resources/drawable/editTextBorder.xml" Line="4" Column="50" />
+      <File FileName="test2/MainActivity.cs" Line="72" Column="1" />
+      <File FileName="../../../../Library/Frameworks/Mono.framework/External/xbuild/Xamarin/Android/Xamarin.Android.Aapt2.targets" Line="215" Column="3" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ESehiyye" expanded="True">
+            <Node name="ESehiyye" expanded="True">
+              <Node name="model" expanded="True" />
+              <Node name="Resources" expanded="True">
+                <Node name="drawable" expanded="True" />
+                <Node name="layout" expanded="True">
+                  <Node name="activity_main.axml" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
