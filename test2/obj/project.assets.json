@@ -1960,11 +1960,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/rufat/Desktop/ESehiyye_Android/test2/ESehiyye.csproj",
+      "projectUniqueName": "/Users/rufat/Desktop/ESehiyyeAndroid/test2/ESehiyye.csproj",
       "projectName": "test2",
-      "projectPath": "/Users/rufat/Desktop/ESehiyye_Android/test2/ESehiyye.csproj",
+      "projectPath": "/Users/rufat/Desktop/ESehiyyeAndroid/test2/ESehiyye.csproj",
       "packagesPath": "/Users/rufat/.nuget/packages/",
-      "outputPath": "/Users/rufat/Desktop/ESehiyye_Android/test2/obj/",
+      "outputPath": "/Users/rufat/Desktop/ESehiyyeAndroid/test2/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -1974,6 +1974,7 @@
         "monoandroid90"
       ],
       "sources": {
+        "/Users/rufat/Downloads": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

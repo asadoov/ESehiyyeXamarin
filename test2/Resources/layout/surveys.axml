@@ -23,7 +23,7 @@
     </FrameLayout>
       <android.support.v7.widget.Toolbar
 		android:id="@+id/toolbar2"
-        android:background="#66ccff"
+        android:background="@drawable/navbarheader"
 		android:layout_width="match_parent"
 		android:layout_height="?attr/actionBarSize"
 		app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
@@ -61,7 +61,7 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 
-		app:itemBackground="@color/colorPrimary"
+	android:background="@drawable/header"
 		app:itemIconTint="@android:color/white"
 		app:itemTextColor="@android:color/white"
 		app:menu="@menu/survey_menu"

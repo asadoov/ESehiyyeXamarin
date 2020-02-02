@@ -37,7 +37,7 @@ namespace ESehiyye
             user_data = JsonConvert.DeserializeObject<List<model.users>>(Intent.GetStringExtra("data"));
             model.db_select select = new model.db_select();
          
-            regionlar = await select.regionlar(Preferences.Get("cypher2", "").ToString(), Preferences.Get("cypher2", "").ToString(), user_data[0].VESIQE_FIN);
+            regionlar = await select.regionlar(Preferences.Get("cypher1", "").ToString(), Preferences.Get("cypher2", "").ToString(), user_data[0].VESIQE_FIN);
             AD = new List<string>();
 
             foreach (var item in regionlar)

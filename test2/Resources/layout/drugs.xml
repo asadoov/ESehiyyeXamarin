@@ -24,7 +24,7 @@
     </FrameLayout>
       <android.support.v7.widget.Toolbar
 		android:id="@+id/toolbar2"
-        android:background="#66ccff"
+        android:background="@drawable/navbarheader"
 		android:layout_width="match_parent"
 		android:layout_height="?attr/actionBarSize"
 		app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
@@ -44,7 +44,7 @@
          android:layout_centerVertical="true"
          android:text="Dərman vasitələri"
          android:textColor="@android:color/white"
-         android:textStyle="bold"
+        
                 android:textSize="25dp"
                 />
 

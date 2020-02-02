@@ -8,7 +8,8 @@ namespace ESehiyye.model
         public string cypher1 { get; set; }
         [JsonProperty(PropertyName = "cypher2")]
         public string cypher2 { get; set; }
-
+        [JsonProperty(PropertyName = "cypher")]
+        public string cypher { get; set; }
 
     }
 }

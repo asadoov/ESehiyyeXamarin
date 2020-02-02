@@ -21,6 +21,7 @@
         
         />
 	<Button
+       
          android:layout_marginTop="20dp"
         	android:gravity="center"
         android:layout_marginLeft="100dp"
@@ -29,7 +30,7 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:id="@+id/button1"
-        android:background="#66ccff"
+        android:background="@drawable/gradient"
         android:textColor="@android:color/white"
         />
 

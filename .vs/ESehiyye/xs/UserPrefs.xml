@@ -1,13 +1,41 @@
 ﻿<Properties StartupConfiguration="{DCEC58C5-131E-4C80-AC28-613B3917AF6F}|Default">
-  <MonoDevelop.Ide.ItemProperties.ESehiyye AndroidDesignerPreferredTheme="AppTheme" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="test2/Resources/layout/activity_main.axml">
+  <MonoDevelop.Ide.ItemProperties.ESehiyye AndroidDesignerPreferredTheme="AppTheme" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.kitkat" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="test2/Resources/drawable/gradient.xml">
     <Files>
-      <File FileName="test2/Resources/layout/activity_main.axml" Line="33" Column="26" />
-      <File FileName="test2/Resources/layout/gradient.xml" Line="3" Column="5" />
-      <File FileName="test2/Resources/layout/ProfileActivity.axml" Line="33" Column="24" />
-      <File FileName="test2/Resources/drawable/editTextBorder.xml" Line="4" Column="50" />
-      <File FileName="test2/MainActivity.cs" Line="72" Column="1" />
-      <File FileName="../../../../Library/Frameworks/Mono.framework/External/xbuild/Xamarin/Android/Xamarin.Android.Aapt2.targets" Line="215" Column="3" />
+      <File FileName="test2/Resources/layout/randevu_patient_item.axml" Line="1" Column="1" />
+      <File FileName="test2/Resources/layout/randevu_patients.axml" Line="38" Column="17" />
+      <File FileName="test2/Resources/layout/Regionlar.axml" Line="67" Column="4" />
+      <File FileName="test2/Resources/layout/settings.axml" Line="1" Column="1" />
+      <File FileName="test2/Resources/layout/StartSearch.axml" Line="22" Column="11" />
+      <File FileName="test2/Resources/layout/surveys.axml" Line="64" Column="39" />
+      <File FileName="test2/Resources/layout/surveys_item.axml" Line="1" Column="1" />
+      <File FileName="test2/Resources/layout/verification_code_check.axml" Line="1" Column="1" />
+      <File FileName="test2/Resources/layout/vezifeler.axml" Line="48" Column="14" />
+      <File FileName="test2/ProfileActivity.cs" Line="1" Column="1" />
+      <File FileName="test2/randevu_patients.cs" Line="39" Column="48" />
+      <File FileName="test2/model/db_select.cs" Line="177" Column="93" />
+      <File FileName="test2/Resources/layout/activity_main.axml" Line="1" Column="1" />
+      <File FileName="test2/Resources/layout/ProfileActivity.axml" Line="26" Column="11" />
+      <File FileName="test2/Resources/layout/posient_details_start.axml" Line="1" Column="1" />
+      <File FileName="test2/Resources/layout/randevu_item.axml" Line="1" Column="1" />
+      <File FileName="test2/Resources/layout/randevu_creator.axml" Line="1" Column="1" />
+      <File FileName="test2/Resources/layout/randevu.axml" Line="1" Column="1" />
+      <File FileName="test2/Resources/layout/posient_details.axml" Line="1" Column="1" />
+      <File FileName="test2/Resources/layout/Muessiseler.axml" Line="1" Column="1" />
+      <File FileName="test2/Resources/layout/institutions_info.xml" Line="1" Column="1" />
+      <File FileName="test2/Resources/layout/immunity.xml" Line="1" Column="1" />
+      <File FileName="test2/Resources/layout/elektron_xidmetler_item.xml" Line="1" Column="1" />
+      <File FileName="test2/Resources/layout/elektron_xidmetler.axml" Line="64" Column="39" />
+      <File FileName="test2/Resources/layout/drugs_item.xml" Line="1" Column="1" />
+      <File FileName="test2/Resources/layout/drugs.xml" Line="1" Column="1" />
+      <File FileName="test2/Resources/layout/doctors.axml" Line="1" Column="1" />
+      <File FileName="test2/Resources/layout/patient_hospital_requests.axml" Line="1" Column="1" />
+      <File FileName="test2/Resources/layout/details_item.axml" Line="1" Column="1" />
+      <File FileName="test2/Resources/layout/axtarish_param.axml" Line="1" Column="1" />
+      <File FileName="test2/Resources/layout/activity_emergency.axml" Line="23" Column="9" />
+      <File FileName="test2/Resources/drawable/gradient.xml" Line="16" Column="9" />
+      <File FileName="test2/Resources/drawable/header.xml" Line="7" Column="35" />
+      <File FileName="test2/Resources/drawable/navbarHeader.xml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,24 +44,23 @@
             <Node name="ESehiyye" expanded="True">
               <Node name="model" expanded="True" />
               <Node name="Resources" expanded="True">
-                <Node name="drawable" expanded="True" />
-                <Node name="layout" expanded="True">
-                  <Node name="activity_main.axml" selected="True" />
+                <Node name="drawable" expanded="True">
+                  <Node name="gradient.xml" selected="True" />
                 </Node>
+                <Node name="layout" expanded="True" />
               </Node>
             </Node>
           </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/rufat/Desktop/ESehiyyeAndroid/test2/Resources/layout/zc5mh8i5.asx~" relfile="test2/Resources/layout/zc5mh8i5.asx~" line="45" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

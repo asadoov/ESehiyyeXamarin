@@ -1,4 +1,8 @@
 ﻿
+<android.support.v4.widget.DrawerLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    >
 <android.support.design.widget.CoordinatorLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:p1="http://schemas.android.com/apk/res/android"
@@ -19,8 +23,8 @@
             android:layout_height="wrap_content"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             android:fitsSystemWindows="true"
-            app:contentScrim="#66ccff"
-            android:background="#66ccff"
+          
+            android:background="@drawable/header"
             app:expandedTitleMarginStart="48dp"
             app:expandedTitleMarginEnd="64dp">
 
@@ -30,7 +34,7 @@
             xmlns:app="http://schemas.android.com/apk/res-auto"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:background="#66ccff"
+
 			app:columnCount="2"
 			app:rowCount="2"
 			android:id="@+id/gridLayout1"
@@ -60,7 +64,7 @@
 			android:layout_width="match_parent"
 	
 			android:id="@+id/user_name"
-			android:background="#66ccff"
+			android:background="@android:color/transparent"
                  android:layout_height="match_parent"
 			
 		
@@ -74,7 +78,7 @@
 				android:id="@+id/user_details"
                 android:layout_height="match_parent"
 				android:layout_width="match_parent"
-				android:background="#66ccff"/>
+				android:background="@android:color/transparent"/>
 
                   </android.support.v7.widget.GridLayout>  
           
@@ -109,6 +113,9 @@
 
            
             <Button
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                 android:background="@drawable/edittextborder"
                   android:drawableTop="@drawable/_2"
 				p1:text="Randevuya yazılanlar"
 				p1:id="@+id/button1"
@@ -121,6 +128,9 @@
            
             />
 			<Button
+                 android:padding="10dp"
+                android:layout_margin="10dp"
+                  android:background="@drawable/edittextborder"
                   android:drawableTop="@drawable/_2"
 				p1:text="Posientə baxış"
 				p1:id="@+id/button2"
@@ -133,6 +143,9 @@
            
             />
             <Button
+                 android:padding="10dp"
+                android:layout_margin="10dp"
+                  android:background="@drawable/edittextborder"
                   android:drawableTop="@drawable/_5"
 				p1:text="Həkim axtarışı və randevu"
 				p1:id="@+id/button3"
@@ -144,6 +157,9 @@
            
             />
 			<Button
+                 android:padding="10dp"
+                android:layout_margin="10dp"
+                 android:background="@drawable/edittextborder"
                   android:drawableTop="@drawable/_3"
 				p1:text="Randevularım"
 				p1:id="@+id/button4"
@@ -154,6 +170,9 @@
                 android:layout_width="10dp"
 				/>
             <Button
+                 android:padding="10dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/edittextborder"
                 android:drawableTop="@drawable/_7"
 				p1:text="Tibb müəssisələrinə müraciətlərim"
 				p1:id="@+id/button5"
@@ -163,6 +182,9 @@
 				app:layout_columnWeight="1"
                 android:layout_width="10dp"/>
             <Button
+                 android:padding="10dp"
+                android:layout_margin="10dp"
+                  android:background="@drawable/edittextborder"
                   android:drawableTop="@drawable/_1"
 				p1:text="Tibbi arayışlarım"
 				p1:id="@+id/button6"
@@ -173,6 +195,9 @@
 		android:layout_width="10dp"
              />
 			<Button
+                 android:padding="10dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/edittextborder"
                   android:drawableTop="@drawable/_6"
 				
 				p1:text="Xəstəliklərim"
@@ -183,6 +208,9 @@
 				app:layout_columnWeight="1"
                 android:layout_width="10dp"/>
             <Button
+                 android:padding="10dp"
+                android:layout_margin="10dp"
+                 android:background="@drawable/edittextborder"
                   android:drawableTop="@drawable/_4"
 				p1:text="Uşaqlarım"
 				p1:id="@+id/button8"
@@ -203,7 +231,8 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:layout_alignParentBottom="true"
-		app:itemBackground="@color/colorPrimary"
+        android:background="@drawable/header"
+		
 		app:itemIconTint="@android:color/white"
 		app:itemTextColor="@android:color/white"
 		app:menu="@menu/bottom_nav"
@@ -212,3 +241,4 @@
 
 	</android.support.design.widget.BottomNavigationView>
 </android.support.design.widget.CoordinatorLayout>
+</android.support.v4.widget.DrawerLayout>

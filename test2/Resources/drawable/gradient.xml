@@ -4,6 +4,7 @@
         android:angle="135"
         
         android:endColor="#25BF7F"
+
         android:startColor="#087A48"
         android:type="linear" />
   <corners 

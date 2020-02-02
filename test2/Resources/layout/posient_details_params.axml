@@ -11,7 +11,7 @@
     >
 	<android.support.v7.widget.Toolbar
 		android:id="@+id/toolbar2"
-		android:background="#66ccff"
+		android:background="@drawable/navbarheader"
 		android:layout_width="match_parent"
 		android:layout_height="?attr/actionBarSize"
 		app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
@@ -43,44 +43,59 @@
 		android:orientation="vertical"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+      android:layout_margin="10dp"
     >
 		<EditText
+             android:layout_margin="5dp"
+            android:padding="10dp"
+            android:background="@drawable/edittextborder"
             android:hint="Ad daxil edin..."
 			android:inputType="textPersonName"
 			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
+			android:layout_height="40dp"
 			android:id="@+id/editText1" />
         <EditText
+             android:layout_margin="5dp"
+            android:padding="10dp"
+            android:background="@drawable/edittextborder"
             android:hint="Soyad daxil edin..."
 			android:inputType="textPersonName"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:id="@+id/editText2" />
 		<EditText
+                android:layout_margin="5dp"
+            android:padding="10dp"
+            android:background="@drawable/edittextborder"
             android:hint="Ata adı daxil edin..."
 			android:inputType="textPersonName"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:id="@+id/editText3" />
         <EditText
+                android:layout_margin="5dp"
+            android:padding="10dp"
+            android:background="@drawable/edittextborder"
             android:hint="Unikal kod daxil edin..."
 			android:inputType="textPersonName"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:id="@+id/editText4" />
                 <EditText
+                android:layout_margin="5dp"
+            android:padding="10dp"
+            android:background="@drawable/edittextborder"
             android:hint="FİN kodu daxil edin..."
 			android:inputType="textPersonName"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:id="@+id/editText5" />
 		<Button
+            
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
 
-			android:background="#6633cc"
+			android:background="@drawable/gradient"
 			android:textColor="@android:color/white"
 			android:text="Axtar"
 			android:layout_width="match_parent"

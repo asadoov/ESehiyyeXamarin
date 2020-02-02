@@ -24,7 +24,7 @@
     </FrameLayout>
       <android.support.v7.widget.Toolbar
 		android:id="@+id/toolbar2"
-        android:background="#66ccff"
+        android:background="@drawable/navbarheader"
 		android:layout_width="match_parent"
 		android:layout_height="?attr/actionBarSize"
 		app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
@@ -55,9 +55,9 @@
 	</android.support.v7.widget.Toolbar>
     
     <SearchView
-     
+     android:layout_margin="10dp"
         android:queryHint="Müəssisənin adı..."
-
+        android:background="@drawable/edittextborder"
 		android:minWidth="25px"
 		android:minHeight="25px"
 		android:layout_width="match_parent"

@@ -20,7 +20,8 @@
             android:layout_gravity="center" />
     </FrameLayout>
           <SearchView
-     
+        android:background="@drawable/edittextborder"
+     android:layout_margin="10dp"
         android:queryHint="Həkim..."
 
 		android:minWidth="25px"

@@ -26,7 +26,7 @@
 
                         <android.support.v7.widget.Toolbar
 		android:id="@+id/toolbar2"
-        android:background="#66ccff"
+        android:background="@drawable/navbarheader"
 		android:layout_width="match_parent"
 		android:layout_height="?attr/actionBarSize"
 		app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
@@ -46,7 +46,7 @@
          android:layout_centerVertical="true"
          android:text="Regionlar"
          android:textColor="@android:color/white"
-         android:textStyle="bold"
+       
                 android:textSize="25dp"
                 />
 
@@ -57,7 +57,8 @@
 	</android.support.v7.widget.Toolbar>
     
     <SearchView
-     
+        android:layout_margin="10dp"
+     android:background="@drawable/edittextborder"
         android:queryHint="Region..."
 
 		android:minWidth="25px"

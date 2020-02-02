@@ -79,8 +79,8 @@ namespace ESehiyye.model
 
             List<Cypher> cypher;
             cypher = await getCyphers(cypher1, cypher2);
-            Preferences.Set("cypher1", cypher[0].cypher1);
-            Preferences.Set("cypher2", cypher[0].cypher2);
+            
+            Preferences.Set("cypher2", cypher[0].cypher);
 
             return jsonDe;
 
@@ -100,8 +100,8 @@ namespace ESehiyye.model
 
             List<Cypher> cypher;
             cypher = await getCyphers(cypher1, cypher2);
-            Preferences.Set("cypher1", cypher[0].cypher1);
-            Preferences.Set("cypher2", cypher[0].cypher2);
+    
+            Preferences.Set("cypher2", cypher[0].cypher);
 
             return jsonDe;
 
@@ -121,8 +121,8 @@ namespace ESehiyye.model
 
             List<Cypher> cypher;
             cypher = await getCyphers(cypher1, cypher2);
-            Preferences.Set("cypher1", cypher[0].cypher1);
-            Preferences.Set("cypher2", cypher[0].cypher2);
+      
+            Preferences.Set("cypher2", cypher[0].cypher);
 
             return jsonDe;
 
@@ -141,8 +141,8 @@ namespace ESehiyye.model
 
             List<Cypher> cypher;
             cypher = await getCyphers(cypher1, cypher2);
-            Preferences.Set("cypher1", cypher[0].cypher1);
-            Preferences.Set("cypher2", cypher[0].cypher2);
+         
+            Preferences.Set("cypher2", cypher[0].cypher);
 
             return jsonDe;
 
@@ -164,8 +164,8 @@ namespace ESehiyye.model
 
             List<Cypher> cypher;
             cypher = await getCyphers(cypher1, cypher2);
-            Preferences.Set("cypher1", cypher[0].cypher1);
-            Preferences.Set("cypher2", cypher[0].cypher2);
+     
+            Preferences.Set("cypher2", cypher[0].cypher);
 
             return jsonDe;
 
@@ -186,8 +186,8 @@ namespace ESehiyye.model
 
             List<Cypher> cypher;
             cypher = await getCyphers(cypher1, cypher2);
-            Preferences.Set("cypher1", cypher[0].cypher1);
-            Preferences.Set("cypher2", cypher[0].cypher2);
+       
+            Preferences.Set("cypher2", cypher[0].cypher);
 
             return jsonDe;
 
@@ -207,8 +207,8 @@ namespace ESehiyye.model
 
             List<Cypher> cypher;
             cypher = await getCyphers(cypher1, cypher2);
-            Preferences.Set("cypher1", cypher[0].cypher1);
-            Preferences.Set("cypher2", cypher[0].cypher2);
+       
+            Preferences.Set("cypher2", cypher[0].cypher);
 
             return jsonDe;
 
@@ -228,8 +228,8 @@ namespace ESehiyye.model
 
             List<Cypher> cypher;
             cypher = await getCyphers(cypher1, cypher2);
-            Preferences.Set("cypher1", cypher[0].cypher1);
-            Preferences.Set("cypher2", cypher[0].cypher2);
+           
+            Preferences.Set("cypher2", cypher[0].cypher);
 
             return jsonDe;
 
@@ -237,6 +237,7 @@ namespace ESehiyye.model
 
 
         }
+
         public async System.Threading.Tasks.Task<ObservableCollection<model.surveys>> surveys(string cypher1, string cypher2, string fin, string id)
         {
             var client = new HttpClient();
@@ -249,8 +250,8 @@ namespace ESehiyye.model
 
             List<Cypher> cypher;
             cypher = await getCyphers(cypher1, cypher2);
-            Preferences.Set("cypher1", cypher[0].cypher1);
-            Preferences.Set("cypher2", cypher[0].cypher2);
+
+            Preferences.Set("cypher2", cypher[0].cypher);
 
             return jsonDe;
 
@@ -258,6 +259,7 @@ namespace ESehiyye.model
 
 
         }
+
         public async System.Threading.Tasks.Task<ObservableCollection<model.institutions_info>> get_institutions()
         {
             var client = new HttpClient();
@@ -275,6 +277,7 @@ namespace ESehiyye.model
 
 
         }
+
         public async System.Threading.Tasks.Task<ObservableCollection<model.model_drugs>> get_drugs()
         {
             var client = new HttpClient();
