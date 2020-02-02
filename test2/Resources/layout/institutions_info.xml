@@ -23,7 +23,7 @@
             android:layout_gravity="center" />
     </FrameLayout>
       <android.support.v7.widget.Toolbar
-		android:id="@+id/toolbar2"
+		android:id="@+id/toolbar"
         android:background="@drawable/navbarheader"
 		android:layout_width="match_parent"
 		android:layout_height="?attr/actionBarSize"
@@ -31,26 +31,23 @@
 		app:layout_collapseMode="pin"
        
                 >
-        <RelativeLayout
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content" >
-
+  
      <TextView
+            android:gravity="center"                    
          android:id="@+id/toolbar_title"
                 
-         android:layout_width="wrap_content"
+         android:layout_width="match_parent"
          android:layout_height="wrap_content"
          android:layout_centerHorizontal="true"
          android:layout_centerVertical="true"
          android:text="Tibb müəssisələri"
          android:textColor="@android:color/white"
-         android:textStyle="bold"
+
                 android:textSize="25dp"
                 />
 
 
 
-     </RelativeLayout>
 
 	</android.support.v7.widget.Toolbar>
     

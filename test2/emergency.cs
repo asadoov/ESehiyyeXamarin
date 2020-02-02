@@ -43,5 +43,10 @@ namespace ESehiyye
                 }
             };
         }
+
+        public override void OnBackPressed()
+        {
+            FinishAffinity();
+        }
     }
 }

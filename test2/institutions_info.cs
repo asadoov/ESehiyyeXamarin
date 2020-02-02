@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 
@@ -8,14 +9,17 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
+using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using Newtonsoft.Json;
+using AlertDialog = Android.App.AlertDialog;
+using V7Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace ESehiyye
 {
     [Activity(Label = "institutions_info")]
-    public class institutions_info : Activity
+    public class institutions_info : AppCompatActivity
     {
         ListView listView1;
         ObservableCollection<model.institutions_info> list = new ObservableCollection<model.institutions_info>();
@@ -25,6 +29,17 @@ namespace ESehiyye
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.institutions_info);
+
+
+
+            var toolbar = FindViewById<V7Toolbar>(Resource.Id.toolbar);
+          
+            SetSupportActionBar(toolbar);
+            
+            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+            SupportActionBar.SetDisplayShowHomeEnabled(true);
+          
+       
             // Create your application here
             FindViewById<FrameLayout>(Resource.Id.progressBarHolder).Visibility = ViewStates.Visible;
 
@@ -69,6 +84,17 @@ namespace ESehiyye
         private void search(object sender, SearchView.QueryTextChangeEventArgs e)
         {
             mAdapter.Filter.InvokeFilter(e.NewText);
+        }
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Android.Resource.Id.Home:
+
+                    OnBackPressed();
+                    return true;
+            }
+            return true;
         }
     }
 }

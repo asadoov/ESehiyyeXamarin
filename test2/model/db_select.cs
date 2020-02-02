@@ -160,14 +160,25 @@ namespace ESehiyye.model
 
             // this result string should be something like: "{"token":"rgh2ghgdsfds"}"
             var result = await response.Content.ReadAsStringAsync();
-            List<reservations> jsonDe = JsonConvert.DeserializeObject<List<reservations>>(result);
+            List<reservations> jsonDe = new List<reservations>();
+            try
+            {
+
+           jsonDe = JsonConvert.DeserializeObject<List<reservations>>(result);
 
             List<Cypher> cypher;
             cypher = await getCyphers(cypher1, cypher2);
      
             Preferences.Set("cypher2", cypher[0].cypher);
+                return jsonDe;
+            }
+            catch 
+            {
 
-            return jsonDe;
+                return jsonDe;
+            }
+
+          
 
 
 
@@ -182,16 +193,23 @@ namespace ESehiyye.model
 
             // this result string should be something like: "{"token":"rgh2ghgdsfds"}"
             var result = await response.Content.ReadAsStringAsync();
-            ObservableCollection<reservations_doctor> jsonDe = JsonConvert.DeserializeObject<ObservableCollection<reservations_doctor>>(result);
+            ObservableCollection<reservations_doctor> jsonDe = new ObservableCollection<reservations_doctor>();
+            try
+            {
+                jsonDe = JsonConvert.DeserializeObject<ObservableCollection<reservations_doctor>>(result);
 
-            List<Cypher> cypher;
-            cypher = await getCyphers(cypher1, cypher2);
-       
-            Preferences.Set("cypher2", cypher[0].cypher);
+                List<Cypher> cypher;
+                cypher = await getCyphers(cypher1, cypher2);
 
-            return jsonDe;
+                Preferences.Set("cypher2", cypher[0].cypher);
 
+                return jsonDe;
 
+            }
+            catch {
+
+                return jsonDe;
+                    }
 
 
         }
@@ -203,7 +221,12 @@ namespace ESehiyye.model
 
             // this result string should be something like: "{"token":"rgh2ghgdsfds"}"
             var result = await response.Content.ReadAsStringAsync();
-            ObservableCollection<model.posient_details> jsonDe = JsonConvert.DeserializeObject<ObservableCollection<model.posient_details>>(result);
+            ObservableCollection<model.posient_details> jsonDe = new ObservableCollection<posient_details>();
+            try
+            {
+
+            
+            jsonDe = JsonConvert.DeserializeObject<ObservableCollection<model.posient_details>>(result);
 
             List<Cypher> cypher;
             cypher = await getCyphers(cypher1, cypher2);
@@ -211,6 +234,11 @@ namespace ESehiyye.model
             Preferences.Set("cypher2", cypher[0].cypher);
 
             return jsonDe;
+            }
+            catch 
+            {
+                return jsonDe;
+            }
 
 
 
@@ -224,16 +252,20 @@ namespace ESehiyye.model
 
             // this result string should be something like: "{"token":"rgh2ghgdsfds"}"
             var result = await response.Content.ReadAsStringAsync();
-            ObservableCollection<model.institutions> jsonDe = JsonConvert.DeserializeObject<ObservableCollection<model.institutions>>(result);
+            ObservableCollection<model.institutions> jsonDe = new ObservableCollection<institutions>();
+            try
+            {
+                jsonDe = JsonConvert.DeserializeObject<ObservableCollection<model.institutions>>(result);
 
-            List<Cypher> cypher;
-            cypher = await getCyphers(cypher1, cypher2);
-           
-            Preferences.Set("cypher2", cypher[0].cypher);
+                List<Cypher> cypher;
+                cypher = await getCyphers(cypher1, cypher2);
 
-            return jsonDe;
+                Preferences.Set("cypher2", cypher[0].cypher);
 
+                return jsonDe;
 
+            }
+            catch { return jsonDe; }
 
 
         }
@@ -246,16 +278,20 @@ namespace ESehiyye.model
 
             // this result string should be something like: "{"token":"rgh2ghgdsfds"}"
             var result = await response.Content.ReadAsStringAsync();
-            ObservableCollection<model.surveys> jsonDe = JsonConvert.DeserializeObject<ObservableCollection<model.surveys>>(result);
+            ObservableCollection<model.surveys> jsonDe = new ObservableCollection<surveys>();
+            try
+            {
+                jsonDe = JsonConvert.DeserializeObject<ObservableCollection<model.surveys>>(result);
 
-            List<Cypher> cypher;
-            cypher = await getCyphers(cypher1, cypher2);
+                List<Cypher> cypher;
+                cypher = await getCyphers(cypher1, cypher2);
 
-            Preferences.Set("cypher2", cypher[0].cypher);
+                Preferences.Set("cypher2", cypher[0].cypher);
 
-            return jsonDe;
+                return jsonDe;
 
-
+            }
+            catch { return jsonDe; }
 
 
         }
@@ -268,11 +304,19 @@ namespace ESehiyye.model
 
             // this result string should be something like: "{"token":"rgh2ghgdsfds"}"
             var result = await response.Content.ReadAsStringAsync();
-            ObservableCollection<model.institutions_info> jsonDe = JsonConvert.DeserializeObject<ObservableCollection<model.institutions_info>>(result);
+            ObservableCollection<model.institutions_info> jsonDe = new ObservableCollection<institutions_info>();
+            try
+            {
 
 
-            return jsonDe;
+                jsonDe = JsonConvert.DeserializeObject<ObservableCollection<model.institutions_info>>(result);
 
+
+                return jsonDe;
+            }
+            catch {
+                return jsonDe;
+            }
 
 
 
@@ -286,12 +330,20 @@ namespace ESehiyye.model
 
             // this result string should be something like: "{"token":"rgh2ghgdsfds"}"
             var result = await response.Content.ReadAsStringAsync();
-            ObservableCollection<model.model_drugs> jsonDe = JsonConvert.DeserializeObject<ObservableCollection<model.model_drugs>>(result);
+            ObservableCollection<model.model_drugs> jsonDe = new ObservableCollection<model_drugs>();
+            try
+            {
+                jsonDe = JsonConvert.DeserializeObject<ObservableCollection<model.model_drugs>>(result);
 
-            return jsonDe;
+                return jsonDe;
 
 
+            }
+            catch
+            {
 
+                return jsonDe;
+            }
 
         }
     }

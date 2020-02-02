@@ -81,5 +81,10 @@ namespace ESehiyye
             }
             FindViewById<FrameLayout>(Resource.Id.progressBarHolder).Visibility = ViewStates.Gone;
         }
+
+        public override void OnBackPressed()
+        {
+            FinishAffinity();
+        }
     }
 }
