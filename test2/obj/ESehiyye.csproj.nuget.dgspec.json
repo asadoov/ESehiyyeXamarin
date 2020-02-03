@@ -21,7 +21,6 @@
           "monoandroid90"
         ],
         "sources": {
-          "/Users/rufat/Downloads": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

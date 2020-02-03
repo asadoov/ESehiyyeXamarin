@@ -1,19 +1,16 @@
 ﻿<Properties StartupConfiguration="{DCEC58C5-131E-4C80-AC28-613B3917AF6F}|Default">
-  <MonoDevelop.Ide.ItemProperties.ESehiyye AndroidDesignerPreferredTheme="AppTheme" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.pixel_xl_pie" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="test2/Resources/values/styles.xml">
+  <MonoDevelop.Ide.ItemProperties.ESehiyye AndroidDesignerPreferredTheme="AppTheme" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="test2/Resources/layout/ProfileActivity.axml">
     <Files>
-      <File FileName="test2/Resources/layout/institutions_info.xml" Line="39" Column="44" />
-      <File FileName="test2/Resources/layout/activity_main.axml" />
-      <File FileName="test2/emergency.cs" />
-      <File FileName="test2/model/db_insert.cs" />
-      <File FileName="test2/institutions_info.cs" Line="31" Column="21" />
-      <File FileName="test2/MainActivity.cs" />
       <File FileName="test2/ProfileActivity.cs" />
       <File FileName="test2/Resources/values/colors.xml" />
       <File FileName="test2/Resources/values/strings.xml" />
       <File FileName="test2/Resources/values/styles.xml" Line="4" Column="57" />
-      <File FileName="test2/patient_hospital_requests.cs" Line="25" Column="29" />
-      <File FileName="../../../../Library/Frameworks/Mono.framework/External/xbuild/Xamarin/Android/Xamarin.Android.Aapt2.targets" Line="155" Column="3" />
+      <File FileName="test2/patient_hospital_requests.cs" />
+      <File FileName="../../../../Library/Frameworks/Mono.framework/External/xbuild/Xamarin/Android/Xamarin.Android.Aapt2.targets" />
+      <File FileName="test2/Resources/layout/axtarish_param.axml" Line="27" Column="6" />
+      <File FileName="test2/Resources/layout/activity_main.axml" Line="1" Column="1" />
+      <File FileName="test2/Resources/layout/ProfileActivity.axml" Line="132" Column="16" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -23,11 +20,11 @@
               <Node name="model" expanded="True" />
               <Node name="Resources" expanded="True">
                 <Node name="drawable" expanded="True" />
-                <Node name="layout" expanded="True" />
-                <Node name="menu" expanded="True" />
-                <Node name="values" expanded="True">
-                  <Node name="styles.xml" selected="True" />
+                <Node name="layout" expanded="True">
+                  <Node name="ProfileActivity.axml" selected="True" />
                 </Node>
+                <Node name="menu" expanded="True" />
+                <Node name="values" expanded="True" />
               </Node>
             </Node>
           </Node>

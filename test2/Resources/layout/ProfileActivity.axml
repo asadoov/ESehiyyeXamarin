@@ -129,7 +129,7 @@
                 android:layout_margin="10dp"
                   android:background="@drawable/edittextborder"
                   android:drawableTop="@drawable/_2"
-				p1:text="Posientə baxış"
+				p1:text="Pasientə baxış"
 				p1:id="@+id/button2"
 				app:layout_rowSpan="1"
 				app:layout_rowWeight="1"
