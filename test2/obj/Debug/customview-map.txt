@@ -51,6 +51,7 @@ color;obj/Debug/res/values/ic_launcher_background.xml
 corners;obj/Debug/res/drawable/edittextborder.xml
 corners;obj/Debug/res/drawable/gradient.xml
 corners;obj/Debug/res/drawable/navbarheader.xml
+corners;obj/Debug/res/drawable/signinheader.xml
 declare-styleable;/Users/rufat/Desktop/ESehiyyeAndroid/test2/obj/Debug/lp/0/jl/res/values/values.xml
 EditText;obj/Debug/res/layout/activity_main.xml
 EditText;obj/Debug/res/layout/axtarish_param.xml
@@ -78,6 +79,7 @@ FrameLayout;obj/Debug/res/layout/vezifeler.xml
 gradient;obj/Debug/res/drawable/gradient.xml
 gradient;obj/Debug/res/drawable/header.xml
 gradient;obj/Debug/res/drawable/navbarheader.xml
+gradient;obj/Debug/res/drawable/signinheader.xml
 gradient;obj/Debug/res/drawable/verification_check_gradient.xml
 ImageView;obj/Debug/res/layout/activity_main.xml
 ImageView;obj/Debug/res/layout/drugs_item.xml
@@ -173,6 +175,7 @@ shape;obj/Debug/res/drawable/edittextborder.xml
 shape;obj/Debug/res/drawable/gradient.xml
 shape;obj/Debug/res/drawable/header.xml
 shape;obj/Debug/res/drawable/navbarheader.xml
+shape;obj/Debug/res/drawable/signinheader.xml
 shape;obj/Debug/res/drawable/verification_check_gradient.xml
 string;obj/Debug/res/values/strings.xml
 stroke;obj/Debug/res/drawable/edittextborder.xml

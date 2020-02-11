@@ -1,31 +1,21 @@
 ﻿<Properties StartupConfiguration="{DCEC58C5-131E-4C80-AC28-613B3917AF6F}|Default">
   <MonoDevelop.Ide.ItemProperties.ESehiyye AndroidDesignerPreferredTheme="AppTheme" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="test2/Resources/layout/ProfileActivity.axml">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="test2/ProfileActivity.cs" />
-      <File FileName="test2/Resources/values/colors.xml" />
-      <File FileName="test2/Resources/values/strings.xml" />
-      <File FileName="test2/Resources/values/styles.xml" Line="4" Column="57" />
-      <File FileName="test2/patient_hospital_requests.cs" />
-      <File FileName="../../../../Library/Frameworks/Mono.framework/External/xbuild/Xamarin/Android/Xamarin.Android.Aapt2.targets" />
-      <File FileName="test2/Resources/layout/axtarish_param.axml" Line="27" Column="6" />
-      <File FileName="test2/Resources/layout/activity_main.axml" Line="1" Column="1" />
-      <File FileName="test2/Resources/layout/ProfileActivity.axml" Line="132" Column="16" />
+      <File FileName="test2/Resources/drawable/SignInHeader.xml" Line="1" Column="1" />
+      <File FileName="test2/Resources/layout/activity_main.axml" Line="75" Column="12" />
+      <File FileName="test2/MainActivity.cs" Line="121" Column="128" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ESehiyye" expanded="True">
             <Node name="ESehiyye" expanded="True">
-              <Node name="model" expanded="True" />
               <Node name="Resources" expanded="True">
                 <Node name="drawable" expanded="True" />
-                <Node name="layout" expanded="True">
-                  <Node name="ProfileActivity.axml" selected="True" />
-                </Node>
-                <Node name="menu" expanded="True" />
-                <Node name="values" expanded="True" />
+                <Node name="layout" expanded="True" />
               </Node>
+              <Node name="MainActivity.cs" selected="True" />
             </Node>
           </Node>
         </State>
