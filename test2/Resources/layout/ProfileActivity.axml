@@ -8,7 +8,12 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
     >
- 
+ <LinearLayout
+
+        android:id="@+id/home"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
      <android.support.design.widget.AppBarLayout android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -108,8 +113,74 @@
 			android:minWidth="25px"
 			android:minHeight="25px">
 
+         <Button
+               android:id="@+id/snsk"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                 android:background="@drawable/edittextborder"
+                  android:drawableTop="@drawable/award"
+				p1:text="SNSK"
+				
+				app:layout_rowSpan="1"
+				app:layout_rowWeight="1"
+				android:layout_height="200dp"
+				app:layout_columnWeight="1"
+		android:layout_width="10dp"
+               
            
-            <Button
+            />
+             <Button
+               android:id="@+id/dtt"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                 android:background="@drawable/edittextborder"
+                  android:drawableTop="@drawable/diploma"
+				p1:text="Davamlı tibbi təhsil"
+				
+				app:layout_rowSpan="1"
+				app:layout_rowWeight="1"
+				android:layout_height="200dp"
+				app:layout_columnWeight="1"
+		android:layout_width="10dp"
+               
+           
+            />
+             <Button
+                android:onClick="drugs"
+               android:id="@+id/drugs"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                 android:background="@drawable/edittextborder"
+                  android:drawableTop="@drawable/drug"
+				p1:text="Dərman vasitələri haqqında məlumat"
+			
+				app:layout_rowSpan="1"
+				app:layout_rowWeight="1"
+				android:layout_height="200dp"
+				app:layout_columnWeight="1"
+		android:layout_width="10dp"
+               
+           
+            />
+             <Button
+              
+               android:onClick="immunity"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                 android:background="@drawable/edittextborder"
+                  android:drawableTop="@drawable/vaccine"
+				p1:text="İmmunoprofilaktika üzrə məlumat"
+				p1:id="@+id/immunity"
+				app:layout_rowSpan="1"
+				app:layout_rowWeight="1"
+				android:layout_height="200dp"
+				app:layout_columnWeight="1"
+		android:layout_width="10dp"
+               
+           
+            />
+           <!-- <Button
+               
                 android:padding="10dp"
                 android:layout_margin="10dp"
                  android:background="@drawable/edittextborder"
@@ -123,8 +194,8 @@
 		android:layout_width="10dp"
                
            
-            />
-			<Button
+            />-->
+			<!--<Button
                  android:padding="10dp"
                 android:layout_margin="10dp"
                   android:background="@drawable/edittextborder"
@@ -138,8 +209,8 @@
 		android:layout_width="10dp"
                
            
-            />
-            <Button
+            />-->
+           <!-- <Button
                  android:padding="10dp"
                 android:layout_margin="10dp"
                   android:background="@drawable/edittextborder"
@@ -152,8 +223,8 @@
 				app:layout_columnWeight="1"
 		android:layout_width="10dp"
            
-            />
-			<Button
+            />-->
+		<!--	<Button
                  android:padding="10dp"
                 android:layout_margin="10dp"
                  android:background="@drawable/edittextborder"
@@ -165,8 +236,8 @@
 				app:layout_rowSpan="1"
 				app:layout_columnWeight="1"
                 android:layout_width="10dp"
-				/>
-            <Button
+				/>-->
+            <!--<Button
                  android:padding="10dp"
                 android:layout_margin="10dp"
                 android:background="@drawable/edittextborder"
@@ -177,8 +248,8 @@
 				app:layout_rowWeight="1"
 				app:layout_rowSpan="1"
 				app:layout_columnWeight="1"
-                android:layout_width="10dp"/>
-            <Button
+                android:layout_width="10dp"/>-->
+           <!-- <Button
                  android:padding="10dp"
                 android:layout_margin="10dp"
                   android:background="@drawable/edittextborder"
@@ -190,8 +261,8 @@
 				android:layout_height="200dp"
 				app:layout_columnWeight="1"
 		android:layout_width="10dp"
-             />
-			<Button
+             />-->
+		<!--	<Button
                  android:padding="10dp"
                 android:layout_margin="10dp"
                 android:background="@drawable/edittextborder"
@@ -203,8 +274,8 @@
 				android:layout_height="200dp"
 				app:layout_rowWeight="1"
 				app:layout_columnWeight="1"
-                android:layout_width="10dp"/>
-            <Button
+                android:layout_width="10dp"/>-->
+          <!--  <Button
                  android:padding="10dp"
                 android:layout_margin="10dp"
                  android:background="@drawable/edittextborder"
@@ -215,23 +286,37 @@
 				android:layout_height="200dp"
 				app:layout_rowSpan="1"
 				app:layout_columnWeight="1"
-                android:layout_width="10dp"/>
+                android:layout_width="10dp"/>-->
 
 
 		</android.support.v7.widget.GridLayout>
 
 	</android.support.v4.widget.NestedScrollView>
 
-        <android.support.design.widget.BottomNavigationView
+     
+</LinearLayout>
+<include
+        android:id="@+id/feedback"
+        android:visibility="gone"
+      layout="@layout/feedbackactivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+    <include
+        android:id="@+id/news"
+        android:visibility="gone"
+      layout="@layout/newsactivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+   <android.support.design.widget.BottomNavigationView
 		android:id="@+id/bottom_navigation"
 		android:layout_gravity="bottom"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:layout_alignParentBottom="true"
-        android:background="@drawable/header"
+        android:background="@android:color/white"
 		
-		app:itemIconTint="@android:color/white"
-		app:itemTextColor="@android:color/white"
+		app:itemIconTint="@android:color/darker_gray"
+		app:itemTextColor="@android:color/darker_gray"
 		app:menu="@menu/bottom_nav"
      
         >

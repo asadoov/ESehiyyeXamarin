@@ -14,6 +14,8 @@ public class ProfileActivity
 			"n_onCreateOptionsMenu:(Landroid/view/Menu;)Z:GetOnCreateOptionsMenu_Landroid_view_Menu_Handler\n" +
 			"n_onOptionsItemSelected:(Landroid/view/MenuItem;)Z:GetOnOptionsItemSelected_Landroid_view_MenuItem_Handler\n" +
 			"n_onBackPressed:()V:GetOnBackPressedHandler\n" +
+			"n_immunity:(Landroid/view/View;)V:__export__\n" +
+			"n_drugs:(Landroid/view/View;)V:__export__\n" +
 			"";
 		mono.android.Runtime.register ("ESehiyye.ProfileActivity, test2", ProfileActivity.class, __md_methods);
 	}
@@ -57,6 +59,22 @@ public class ProfileActivity
 	}
 
 	private native void n_onBackPressed ();
+
+
+	public void immunity (android.view.View p0)
+	{
+		n_immunity (p0);
+	}
+
+	private native void n_immunity (android.view.View p0);
+
+
+	public void drugs (android.view.View p0)
+	{
+		n_drugs (p0);
+	}
+
+	private native void n_drugs (android.view.View p0);
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)

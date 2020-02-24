@@ -22,6 +22,7 @@ android.support.v7.widget.Toolbar;obj/Debug/res/layout/axtarish_param.xml
 android.support.v7.widget.Toolbar;obj/Debug/res/layout/doctors.xml
 android.support.v7.widget.Toolbar;obj/Debug/res/layout/drugs.xml
 android.support.v7.widget.Toolbar;obj/Debug/res/layout/elektron_xidmetler.xml
+android.support.v7.widget.Toolbar;obj/Debug/res/layout/feedbackactivity.xml
 android.support.v7.widget.Toolbar;obj/Debug/res/layout/immunity.xml
 android.support.v7.widget.Toolbar;obj/Debug/res/layout/institutions_info.xml
 android.support.v7.widget.Toolbar;obj/Debug/res/layout/muessiseler.xml
@@ -35,11 +36,13 @@ android.support.v7.widget.Toolbar;obj/Debug/res/layout/regionlar.xml
 android.support.v7.widget.Toolbar;obj/Debug/res/layout/settings.xml
 android.support.v7.widget.Toolbar;obj/Debug/res/layout/surveys.xml
 android.support.v7.widget.Toolbar;obj/Debug/res/layout/vezifeler.xml
+android.webkit.WebView;obj/Debug/res/layout/signupactivity.xml
 attr;/Users/rufat/Desktop/ESehiyyeAndroid/test2/obj/Debug/lp/0/jl/res/values/values.xml
 background;obj/Debug/res/mipmap-anydpi-v26/ic_launcher.xml
 background;obj/Debug/res/mipmap-anydpi-v26/ic_launcher_round.xml
 Button;obj/Debug/res/layout/activity_main.xml
 Button;obj/Debug/res/layout/axtarish_param.xml
+Button;obj/Debug/res/layout/feedbackactivity.xml
 Button;obj/Debug/res/layout/posient_details_params.xml
 Button;obj/Debug/res/layout/posient_details_start.xml
 Button;obj/Debug/res/layout/profileactivity.xml
@@ -48,6 +51,7 @@ Button;obj/Debug/res/layout/startsearch.xml
 cache-path;/Users/rufat/Desktop/ESehiyyeAndroid/test2/obj/Debug/lp/37/jl/res/xml/xamarin_essentials_fileprovider_file_paths.xml
 color;obj/Debug/res/values/colors.xml
 color;obj/Debug/res/values/ic_launcher_background.xml
+corners;obj/Debug/res/drawable/bluegradient.xml
 corners;obj/Debug/res/drawable/edittextborder.xml
 corners;obj/Debug/res/drawable/gradient.xml
 corners;obj/Debug/res/drawable/navbarheader.xml
@@ -65,6 +69,7 @@ FrameLayout;obj/Debug/res/layout/activity_main.xml
 FrameLayout;obj/Debug/res/layout/doctors.xml
 FrameLayout;obj/Debug/res/layout/drugs.xml
 FrameLayout;obj/Debug/res/layout/elektron_xidmetler.xml
+FrameLayout;obj/Debug/res/layout/feedbackactivity.xml
 FrameLayout;obj/Debug/res/layout/immunity.xml
 FrameLayout;obj/Debug/res/layout/institutions_info.xml
 FrameLayout;obj/Debug/res/layout/muessiseler.xml
@@ -76,6 +81,7 @@ FrameLayout;obj/Debug/res/layout/regionlar.xml
 FrameLayout;obj/Debug/res/layout/surveys.xml
 FrameLayout;obj/Debug/res/layout/verification_code_check.xml
 FrameLayout;obj/Debug/res/layout/vezifeler.xml
+gradient;obj/Debug/res/drawable/bluegradient.xml
 gradient;obj/Debug/res/drawable/gradient.xml
 gradient;obj/Debug/res/drawable/header.xml
 gradient;obj/Debug/res/drawable/navbarheader.xml
@@ -84,6 +90,7 @@ gradient;obj/Debug/res/drawable/verification_check_gradient.xml
 ImageView;obj/Debug/res/layout/activity_main.xml
 ImageView;obj/Debug/res/layout/drugs_item.xml
 ImageView;obj/Debug/res/layout/randevu_patient_item.xml
+include;obj/Debug/res/layout/profileactivity.xml
 item;obj/Debug/res/drawable/verification_check_gradient.xml
 item;obj/Debug/res/menu/bottom_nav.xml
 item;obj/Debug/res/menu/profile_menu.xml
@@ -94,18 +101,22 @@ LinearLayout;obj/Debug/res/layout/axtarish_param.xml
 LinearLayout;obj/Debug/res/layout/doctors.xml
 LinearLayout;obj/Debug/res/layout/drugs.xml
 LinearLayout;obj/Debug/res/layout/elektron_xidmetler.xml
+LinearLayout;obj/Debug/res/layout/feedbackactivity.xml
 LinearLayout;obj/Debug/res/layout/immunity.xml
 LinearLayout;obj/Debug/res/layout/institutions_info.xml
 LinearLayout;obj/Debug/res/layout/muessiseler.xml
+LinearLayout;obj/Debug/res/layout/newsactivity.xml
 LinearLayout;obj/Debug/res/layout/patient_hospital_requests.xml
 LinearLayout;obj/Debug/res/layout/posient_details.xml
 LinearLayout;obj/Debug/res/layout/posient_details_params.xml
 LinearLayout;obj/Debug/res/layout/posient_details_start.xml
+LinearLayout;obj/Debug/res/layout/profileactivity.xml
 LinearLayout;obj/Debug/res/layout/randevu.xml
 LinearLayout;obj/Debug/res/layout/randevu_creator.xml
 LinearLayout;obj/Debug/res/layout/randevu_patients.xml
 LinearLayout;obj/Debug/res/layout/regionlar.xml
 LinearLayout;obj/Debug/res/layout/settings.xml
+LinearLayout;obj/Debug/res/layout/signupactivity.xml
 LinearLayout;obj/Debug/res/layout/startsearch.xml
 LinearLayout;obj/Debug/res/layout/surveys.xml
 LinearLayout;obj/Debug/res/layout/verification_code_check.xml
@@ -116,6 +127,7 @@ ListView;obj/Debug/res/layout/elektron_xidmetler.xml
 ListView;obj/Debug/res/layout/immunity.xml
 ListView;obj/Debug/res/layout/institutions_info.xml
 ListView;obj/Debug/res/layout/muessiseler.xml
+ListView;obj/Debug/res/layout/newsactivity.xml
 ListView;obj/Debug/res/layout/patient_hospital_requests.xml
 ListView;obj/Debug/res/layout/posient_details.xml
 ListView;obj/Debug/res/layout/randevu.xml
@@ -131,6 +143,7 @@ ProgressBar;obj/Debug/res/layout/activity_main.xml
 ProgressBar;obj/Debug/res/layout/doctors.xml
 ProgressBar;obj/Debug/res/layout/drugs.xml
 ProgressBar;obj/Debug/res/layout/elektron_xidmetler.xml
+ProgressBar;obj/Debug/res/layout/feedbackactivity.xml
 ProgressBar;obj/Debug/res/layout/immunity.xml
 ProgressBar;obj/Debug/res/layout/institutions_info.xml
 ProgressBar;obj/Debug/res/layout/muessiseler.xml
@@ -147,6 +160,7 @@ RelativeLayout;obj/Debug/res/layout/axtarish_param.xml
 RelativeLayout;obj/Debug/res/layout/doctors.xml
 RelativeLayout;obj/Debug/res/layout/drugs.xml
 RelativeLayout;obj/Debug/res/layout/elektron_xidmetler.xml
+RelativeLayout;obj/Debug/res/layout/feedbackactivity.xml
 RelativeLayout;obj/Debug/res/layout/immunity.xml
 RelativeLayout;obj/Debug/res/layout/muessiseler.xml
 RelativeLayout;obj/Debug/res/layout/patient_hospital_requests.xml
@@ -171,6 +185,7 @@ SearchView;obj/Debug/res/layout/posient_details.xml
 SearchView;obj/Debug/res/layout/regionlar.xml
 SearchView;obj/Debug/res/layout/vezifeler.xml
 selector;obj/Debug/res/drawable/verification_check_gradient.xml
+shape;obj/Debug/res/drawable/bluegradient.xml
 shape;obj/Debug/res/drawable/edittextborder.xml
 shape;obj/Debug/res/drawable/gradient.xml
 shape;obj/Debug/res/drawable/header.xml
@@ -188,6 +203,7 @@ TextView;obj/Debug/res/layout/drugs.xml
 TextView;obj/Debug/res/layout/drugs_item.xml
 TextView;obj/Debug/res/layout/elektron_xidmetler.xml
 TextView;obj/Debug/res/layout/elektron_xidmetler_item.xml
+TextView;obj/Debug/res/layout/feedbackactivity.xml
 TextView;obj/Debug/res/layout/immunity.xml
 TextView;obj/Debug/res/layout/institutions_info.xml
 TextView;obj/Debug/res/layout/muessiseler.xml

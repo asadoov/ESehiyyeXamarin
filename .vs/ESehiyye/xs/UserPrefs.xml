@@ -1,21 +1,32 @@
 ﻿<Properties StartupConfiguration="{DCEC58C5-131E-4C80-AC28-613B3917AF6F}|Default">
   <MonoDevelop.Ide.ItemProperties.ESehiyye AndroidDesignerPreferredTheme="AppTheme" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="test2/Resources/layout/ProfileActivity.axml">
     <Files>
-      <File FileName="test2/Resources/drawable/SignInHeader.xml" Line="1" Column="1" />
-      <File FileName="test2/Resources/layout/activity_main.axml" Line="75" Column="12" />
-      <File FileName="test2/MainActivity.cs" Line="121" Column="128" />
+      <File FileName="test2/settings.cs" Line="25" Column="54" />
+      <File FileName="test2/SignUpActivity.cs" Line="34" Column="14" />
+      <File FileName="test2/Resources/layout/immunity.xml" Line="9" Column="3" />
+      <File FileName="test2/Resources/menu/bottom_nav.axml" Line="23" Column="26" />
+      <File FileName="test2/Controller/emergency.cs" Line="44" Column="17" />
+      <File FileName="test2/Controller/ProfileActivity.cs" Line="78" Column="110" />
+      <File FileName="test2/Controller/ExidmetActivity.cs" Line="57" Column="17" />
+      <File FileName="test2/Controller/feedbackActivity.cs" Line="28" Column="1" />
+      <File FileName="test2/Controller/hekimler.cs" Line="29" Column="53" />
+      <File FileName="test2/Resources/layout/newsActivity.axml" Line="55" Column="1" />
+      <File FileName="test2/Resources/layout/ProfileActivity.axml" Line="11" Column="12" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ESehiyye" expanded="True">
             <Node name="ESehiyye" expanded="True">
+              <Node name="References" expanded="True" />
+              <Node name="Controller" expanded="True" />
+              <Node name="model" expanded="True" />
               <Node name="Resources" expanded="True">
-                <Node name="drawable" expanded="True" />
-                <Node name="layout" expanded="True" />
+                <Node name="layout" expanded="True">
+                  <Node name="ProfileActivity.axml" selected="True" />
+                </Node>
               </Node>
-              <Node name="MainActivity.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -27,6 +38,7 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/rufat/Desktop/ESehiyyeAndroid/test2/Resources/layout/zc5mh8i5.asx~" relfile="test2/Resources/layout/zc5mh8i5.asx~" line="45" column="1" />
+      <Breakpoint file="/Users/rufat/Desktop/ESehiyyeAndroid/test2/model/db_select.cs" relfile="test2/model/db_select.cs" line="307" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

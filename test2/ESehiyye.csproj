@@ -56,55 +56,58 @@
     <Reference Include="Mono.Android" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors" />
+    <Reference Include="Mono.Android.Export" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="drugs.cs" />
     <Compile Include="adapters\drugs_adapter.cs" />
-    <Compile Include="elektron_xidmetler_adapter.cs" />
-    <Compile Include="immunity.cs" />
-    <Compile Include="institutions_adapter.cs" />
-    <Compile Include="institutions_info.cs" />
-    <Compile Include="MainActivity.cs" />
     <Compile Include="model\institutions.cs" />
     <Compile Include="model\institutions_info.cs" />
     <Compile Include="model\model_drugs.cs" />
     <Compile Include="model\posient_details.cs" />
     <Compile Include="model\surveys.cs" />
-    <Compile Include="patient_hospital_requests.cs" />
-    <Compile Include="patient_hospital_requests_adapter.cs" />
-    <Compile Include="posient_details_list_adapter.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="model\users.cs" />
     <Compile Include="model\db_select.cs" />
-    <Compile Include="ProfileActivity.cs" />
-    <Compile Include="ExidmetActivity.cs" />
-    <Compile Include="emergency.cs" />
-    <Compile Include="StartSearch.cs" />
-    <Compile Include="axtarish_param.cs" />
-    <Compile Include="Regionlar.cs" />
     <Compile Include="model\regions_and_inst.cs" />
-    <Compile Include="muessiseler.cs" />
-    <Compile Include="survey.cs" />
-    <Compile Include="surveys_adapter.cs" />
-    <Compile Include="verification_code_check.cs" />
-    <Compile Include="vezifeler.cs" />
     <Compile Include="model\vezifeler.cs" />
-    <Compile Include="hekimler.cs" />
     <Compile Include="model\doctors.cs" />
-    <Compile Include="randevu_creator.cs" />
     <Compile Include="model\db_insert.cs" />
-    <Compile Include="LanguageAdapter.cs" />
     <Compile Include="model\reservations.cs" />
-    <Compile Include="randevu.cs" />
-    <Compile Include="randevu_patients.cs" />
-    <Compile Include="randevu_patients_adapter.cs" />
     <Compile Include="model\reservations_doctor.cs" />
-    <Compile Include="settings.cs" />
-    <Compile Include="posient_details_start.cs" />
-    <Compile Include="posient_details.cs" />
-    <Compile Include="posient_details_params.cs" />
     <Compile Include="model\Cypher.cs" />
+    <Compile Include="Controller\axtarish_param.cs" />
+    <Compile Include="Controller\drugs.cs" />
+    <Compile Include="Controller\elektron_xidmetler_adapter.cs" />
+    <Compile Include="Controller\emergency.cs" />
+    <Compile Include="Controller\ExidmetActivity.cs" />
+    <Compile Include="Controller\hekimler.cs" />
+    <Compile Include="Controller\immunity.cs" />
+    <Compile Include="Controller\institutions_adapter.cs" />
+    <Compile Include="Controller\institutions_info.cs" />
+    <Compile Include="Controller\LanguageAdapter.cs" />
+    <Compile Include="Controller\MainActivity.cs" />
+    <Compile Include="Controller\muessiseler.cs" />
+    <Compile Include="Controller\patient_hospital_requests.cs" />
+    <Compile Include="Controller\patient_hospital_requests_adapter.cs" />
+    <Compile Include="Controller\posient_details.cs" />
+    <Compile Include="Controller\posient_details_list_adapter.cs" />
+    <Compile Include="Controller\posient_details_params.cs" />
+    <Compile Include="Controller\posient_details_start.cs" />
+    <Compile Include="Controller\ProfileActivity.cs" />
+    <Compile Include="Controller\randevu.cs" />
+    <Compile Include="Controller\randevu_creator.cs" />
+    <Compile Include="Controller\randevu_patients.cs" />
+    <Compile Include="Controller\randevu_patients_adapter.cs" />
+    <Compile Include="Controller\Regionlar.cs" />
+    <Compile Include="Controller\settings.cs" />
+    <Compile Include="Controller\SignUpActivity.cs" />
+    <Compile Include="Controller\StartSearch.cs" />
+    <Compile Include="Controller\survey.cs" />
+    <Compile Include="Controller\surveys_adapter.cs" />
+    <Compile Include="Controller\verification_code_check.cs" />
+    <Compile Include="Controller\vezifeler.cs" />
+    <Compile Include="Controller\feedbackActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -302,12 +305,6 @@
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\profil_ico.png">
-      <SubType>
-      </SubType>
-      <Generator>
-      </Generator>
-    </AndroidResource>
     <AndroidResource Include="Resources\drawable\hospital_ico.png">
       <SubType>
       </SubType>
@@ -379,6 +376,50 @@
       <Generator></Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\passwordICO.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\news.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\drug.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\award.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\customer.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\feedback.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\vaccine.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\SignUpActivity.axml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\diploma.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\feedbackActivity.axml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\blueGradient.xml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\newsActivity.axml">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
@@ -471,6 +512,9 @@
     <AndroidResource Include="Resources\layout\immunity.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controller\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -296,11 +296,11 @@ namespace ESehiyye.model
 
         }
 
-        public async System.Threading.Tasks.Task<ObservableCollection<model.institutions_info>> get_institutions()
+        public async System.Threading.Tasks.Task<ObservableCollection<model.institutions_info>> get_institutions(string cypher1,string cypher2)
         {
             var client = new HttpClient();
             client.BaseAddress = new Uri("https://eservice.e-health.gov.az");
-            HttpResponseMessage response = await client.GetAsync("/iosmobileapplication/qeydiyyatsizxidmetler/tibbmuessiseleri");
+            HttpResponseMessage response = await client.GetAsync($"/iosmobileapplication/qeydiyyatsizxidmetler/tibbmuessiseleri?cypher1={cypher1}&pass={cypher2}");
 
             // this result string should be something like: "{"token":"rgh2ghgdsfds"}"
             var result = await response.Content.ReadAsStringAsync();
@@ -310,6 +310,10 @@ namespace ESehiyye.model
 
 
                 jsonDe = JsonConvert.DeserializeObject<ObservableCollection<model.institutions_info>>(result);
+                List<Cypher> cypher;
+                cypher = await getCyphers(cypher1, cypher2);
+
+                Preferences.Set("cypher2", cypher[0].cypher);
 
 
                 return jsonDe;
@@ -322,11 +326,11 @@ namespace ESehiyye.model
 
         }
 
-        public async System.Threading.Tasks.Task<ObservableCollection<model.model_drugs>> get_drugs()
+        public async System.Threading.Tasks.Task<ObservableCollection<model.model_drugs>> get_drugs(string cypher1,string cypher2)
         {
             var client = new HttpClient();
             client.BaseAddress = new Uri("https://eservice.e-health.gov.az");
-            HttpResponseMessage response = await client.GetAsync("/iosmobileapplication/qeydiyyatsizxidmetler/dermanvasiteleri");
+            HttpResponseMessage response = await client.GetAsync($"/iosmobileapplication/qeydiyyatsizxidmetler/dermanvasiteleri?cypher1={cypher1}&pass={cypher2}");
 
             // this result string should be something like: "{"token":"rgh2ghgdsfds"}"
             var result = await response.Content.ReadAsStringAsync();
@@ -334,6 +338,10 @@ namespace ESehiyye.model
             try
             {
                 jsonDe = JsonConvert.DeserializeObject<ObservableCollection<model.model_drugs>>(result);
+                List<Cypher> cypher;
+                cypher = await getCyphers(cypher1, cypher2);
+
+                Preferences.Set("cypher2", cypher[0].cypher);
 
                 return jsonDe;
 

@@ -3,25 +3,27 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
-<item
-    android:id="@+id/elektron_xidmet"
-android:enabled="true"
-        android:icon="@drawable/menu_ico"
-android:title="Elektron xidmətlər"
-android:showAsAction="ifRoom"/>
+
     <item
-    android:id="@+id/profile"
-        
+    
+        android:id="@+id/feedback"
 android:enabled="true"
-        android:icon="@drawable/profil_ico"
-android:title="Profil"
+        android:icon="@drawable/feedback"
+android:title="Əks əlaqə"
 android:showAsAction="ifRoom"
         />
     <item
-    android:id="@+id/emergency"
+        android:id="@+id/profile"
+    
 android:enabled="true"
-        android:icon="@drawable/hospital_ico"
-android:title="Təcili yardım"
+        android:icon="@drawable/customer"
+android:title="Profil"
+android:showAsAction="ifRoom"/>
+    <item
+    android:id="@+id/news"
+android:enabled="true"
+        android:icon="@drawable/news"
+android:title="Xəbərlər"
 android:showAsAction="ifRoom"/>
 
 </menu>
