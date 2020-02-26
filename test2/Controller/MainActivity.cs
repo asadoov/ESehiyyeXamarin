@@ -8,11 +8,12 @@ using Android.Views;
 using AlertDialog = Android.App.AlertDialog;
 using Xamarin.Essentials;
 using ESehiyye.model;
+using ESehiyye.Controller;
 
 
 namespace ESehiyye
 {
-    [Activity(Label = "@string/app_name", Theme = "@android:style/Theme.DeviceDefault.NoActionBar", MainLauncher = true)]
+    [Activity(Label = "@string/app_name", Theme = "@style/Theme.AppCompat.Light", MainLauncher = true)]
     public class MainActivity : Activity
     {
 
@@ -96,7 +97,7 @@ namespace ESehiyye
                                     StartActivity(next);
                                     FindViewById<Button>(Resource.Id.button1).Text = "Daxil ol";
                                     FindViewById<Button>(Resource.Id.button1).Enabled = true;
-                                    FindViewById<FrameLayout>(Resource.Id.progressBarHolder).Visibility = ViewStates.Gone;
+                                   
 
                                     Preferences.Set("user_data", JsonConvert.SerializeObject(user_data));
                                     Preferences.Set("cypher1", cypher[0].cypher1);
@@ -104,7 +105,7 @@ namespace ESehiyye
                                 }
                                 else
                                 {
-                                    FindViewById<FrameLayout>(Resource.Id.progressBarHolder).Visibility = ViewStates.Gone;
+                                   
                                     AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
                                     alertDialog.SetTitle("Bildiriş");
                                     alertDialog.SetMessage("Email və ya şifrənin düzgünlüyünə diqqət edin");
@@ -113,8 +114,20 @@ namespace ESehiyye
                                     FindViewById<Button>(Resource.Id.button1).Text = "Daxil ol";
                                     FindViewById<Button>(Resource.Id.button1).Enabled = true;
                                 }
+                               
 
                             }
+                            else
+                            {
+                                AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+                                alertDialog.SetTitle("Bildiriş");
+                                alertDialog.SetMessage("Email və ya şifrənin düzgünlüyünə diqqət edin");
+                                alertDialog.Show();
+                                // Toast.MakeText(ApplicationContext, "email ve ya shifre yalnishdir", ToastLength.Long).Show();
+                                FindViewById<Button>(Resource.Id.button1).Text = "Daxil ol";
+                                FindViewById<Button>(Resource.Id.button1).Enabled = true;
+                            }
+                            FindViewById<FrameLayout>(Resource.Id.progressBarHolder).Visibility = ViewStates.Gone;
                         }
 
                         else
@@ -157,7 +170,17 @@ namespace ESehiyye
                 return false;
             }
         }
+        [Java.Interop.Export("passwordRecovery")]
+        public void passwordRecovery(View v)
+        {
 
+
+            Intent passRecovery = new Intent(this, typeof(PasswordRecoveryActivity));
+
+            StartActivity(passRecovery);
+            //Toast.MakeText(ApplicationContext, "esdasad", ToastLength.Long).Show();
+
+        }
         [Java.Interop.Export("signUpClick")]
         public void signUpClick(View v)
         {

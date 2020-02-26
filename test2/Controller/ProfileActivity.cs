@@ -1,27 +1,38 @@
 ﻿
 using System.Collections.Generic;
-
+using System.Collections.ObjectModel;
 using Android.App;
 using Android.Content;
 using Android.Graphics;
 using Android.OS;
 
 using Android.Support.Design.Widget;
+using Android.Support.V4.Widget;
 using Android.Support.V7.App;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
 using Newtonsoft.Json;
 using Xamarin.Essentials;
+using ESehiyye.Controller;
+using ESehiyye.model;
 using V7Toolbar = Android.Support.V7.Widget.Toolbar;
+using System;
 
 namespace ESehiyye
 {
     [Activity(Label = "ProfileActivity")]
     public class ProfileActivity : AppCompatActivity
     {
+        ObservableCollection<model.NewsStruct> newsList = new ObservableCollection<model.NewsStruct>();
+        ObservableCollection<model.NewsStruct> filteredNewsList = new ObservableCollection<model.NewsStruct>();
+        NewsAdapter newsAdapter;
+        model.db_select select = new model.db_select();
+        //bool newsClicked = false;
+        Android.App.AlertDialog.Builder alertDialog;
         protected override void OnCreate(Bundle savedInstanceState)
         {
+           
             base.OnCreate(savedInstanceState);
             // Create your application here
             SetContentView(Resource.Layout.ProfileActivity);
@@ -69,20 +80,63 @@ namespace ESehiyye
                 var bottomNavigation = FindViewById<BottomNavigationView>(Resource.Id.bottom_navigation);
                 bottomNavigation.SelectedItemId = Resource.Id.profile;
 
-                bottomNavigation.NavigationItemSelected += (s, e) =>
+                bottomNavigation.NavigationItemSelected += async (s, e) =>
                  {
                      switch (e.Item.ItemId)
                      {
                          case Resource.Id.feedback:
                             // Finish();
                              FindViewById<LinearLayout>(Resource.Id.feedback).Visibility = ViewStates.Visible;
+                             FindViewById<LinearLayout>(Resource.Id.news).Visibility = ViewStates.Gone;
+                             FindViewById<AppBarLayout>(Resource.Id.appbar).Visibility = ViewStates.Gone;
+                             FindViewById<NestedScrollView>(Resource.Id.profileScroll).Visibility = ViewStates.Gone;
+
                              //Intent feedback = new Intent(this, typeof());
                              //StartActivity(feedback);
                              break;
                          case Resource.Id.news:
-                           //  Finish();
-                             //Intent news = new Intent(this, typeof(newsActivity));
-                             //StartActivity(news);
+
+
+                             FindViewById<FrameLayout>(Resource.Id.progressBarHolder).Visibility = ViewStates.Visible;
+                             FindViewById<LinearLayout>(Resource.Id.news).Visibility = ViewStates.Visible;
+                             FindViewById<TextView>(Resource.Id.toolbarTitle).Text = "Xəbərlər";
+                             FindViewById<LinearLayout>(Resource.Id.feedback).Visibility = ViewStates.Gone;
+                             FindViewById<AppBarLayout>(Resource.Id.appbar).Visibility = ViewStates.Gone;
+                             FindViewById<NestedScrollView>(Resource.Id.profileScroll).Visibility = ViewStates.Gone;
+
+                             FindViewById<SearchView>(Resource.Id.newsSearch).QueryTextChange += newsSearch;
+
+
+
+                             newsList = await select.getNews(Preferences.Get("cypher1", "").ToString(), Preferences.Get("cypher2", "").ToString());
+                                 if (newsList.Count > 0)
+                                 {
+
+
+                                   newsAdapter = new NewsAdapter(newsList);
+                                     FindViewById<ListView>(Resource.Id.newsList).Adapter = newsAdapter;
+                                 FindViewById<ListView>(Resource.Id.newsList).ItemClick += newsClicked;
+                                    // newsClicked = true;
+                                 }
+                                 else
+                                 {
+                                     alertDialog = new Android.App.AlertDialog.Builder(this);
+                                     alertDialog.SetTitle("Bildiriş");
+                                     alertDialog.SetMessage("Xəbərləri yükləmək mümkün olmadı");
+                                     //alertDialog.SetPositiveButton("Tamam", delegate
+                                     //{
+                                     //    alertDialog.Dispose();
+                                     //});
+                                     alertDialog.Show();
+                                 }
+                             
+                             FindViewById<FrameLayout>(Resource.Id.progressBarHolder).Visibility = ViewStates.Gone;
+                             break;
+                         case Resource.Id.profile:
+                             FindViewById<AppBarLayout>(Resource.Id.appbar).Visibility = ViewStates.Visible;
+                             FindViewById<NestedScrollView>(Resource.Id.profileScroll).Visibility = ViewStates.Visible;
+                             FindViewById<LinearLayout>(Resource.Id.news).Visibility = ViewStates.Gone;
+                             FindViewById<LinearLayout>(Resource.Id.feedback).Visibility = ViewStates.Gone;
                              break;
                      }
                  };
@@ -125,6 +179,69 @@ namespace ESehiyye
 
             }
         }
+
+        private void newsClicked(object sender, AdapterView.ItemClickEventArgs e)
+        {
+           
+            FindViewById<SearchView>(Resource.Id.newsSearch).Visibility=ViewStates.Gone;
+            FindViewById<ListView>(Resource.Id.newsList).Visibility = ViewStates.Gone;
+            FindViewById<TextView>(Resource.Id.newsDetailedDescription).Visibility = ViewStates.Visible;
+            FindViewById<ImageButton>(Resource.Id.backBtn).Visibility = ViewStates.Visible;
+            if (filteredNewsList.Count>0)
+            {
+                FindViewById<TextView>(Resource.Id.toolbarTitle).Text = filteredNewsList[e.Position].NAME;
+                FindViewById<TextView>(Resource.Id.newsDetailedDescription).Text = filteredNewsList[e.Position].TEXT;
+            }
+            else
+            {
+                FindViewById<TextView>(Resource.Id.toolbarTitle).Text = newsList[e.Position].NAME;
+                FindViewById<TextView>(Resource.Id.newsDetailedDescription).Text = newsList[e.Position].TEXT;
+            }
+           
+
+
+        }
+        [Java.Interop.Export("backClicked")]
+        public void backClicked(View v)
+        {
+            FindViewById<SearchView>(Resource.Id.newsSearch).Visibility = ViewStates.Visible;
+            FindViewById<ListView>(Resource.Id.newsList).Visibility = ViewStates.Visible;
+            FindViewById<TextView>(Resource.Id.newsDetailedDescription).Visibility = ViewStates.Gone;
+            FindViewById<ImageButton>(Resource.Id.backBtn).Visibility = ViewStates.Gone;
+            FindViewById<TextView>(Resource.Id.toolbarTitle).Text = "Xəbərlər";
+            FindViewById<TextView>(Resource.Id.newsDetailedDescription).Text = "";
+
+
+
+        }
+        private void newsSearch(object sender, SearchView.QueryTextChangeEventArgs e)
+        {
+            var searchText = e.NewText;
+            switch (searchText)
+            {
+                case "":
+                    filteredNewsList.Clear();
+               newsAdapter = new NewsAdapter(newsList);
+                    break;
+                default:
+                    filteredNewsList.Clear();
+                    foreach (model.NewsStruct item in newsList)
+                    {
+                        if (item.NAME.ToLower().Contains(searchText.ToLower()))
+                        {
+                            filteredNewsList.Add(item);
+                        }
+                    }
+
+                    newsAdapter = new NewsAdapter(filteredNewsList);
+
+                    break;
+            }
+            FindViewById<ListView>(Resource.Id.newsList).Adapter = newsAdapter;
+
+
+        }
+
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
             MenuInflater.Inflate(Resource.Menu.profile_menu, menu);
@@ -166,6 +283,30 @@ namespace ESehiyye
 
 
         }
+        [Java.Interop.Export("sendFeedback")]
+        public void sendFeedback(View v)
+        {
+
+            string feedbackTxt = FindViewById<TextView>(Resource.Id.feedbackTxt).Text;
+            if (feedbackTxt.Length > 5 && !string.IsNullOrEmpty(feedbackTxt))
+            {
+
+            }
+            else
+            {
+                alertDialog = new Android.App.AlertDialog.Builder(this);
+                alertDialog.SetTitle("Bildiriş");
+                alertDialog.SetMessage("Zəhmət olmasa müracitinizi daxil edin");
+                //alertDialog.SetPositiveButton("Tamam", delegate
+                //{
+                //    alertDialog.Dispose();
+                //});
+                alertDialog.Show();
+            }
+
+
+        }
+
 
     }
 }

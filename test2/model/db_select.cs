@@ -330,7 +330,7 @@ namespace ESehiyye.model
         {
             var client = new HttpClient();
             client.BaseAddress = new Uri("https://eservice.e-health.gov.az");
-            HttpResponseMessage response = await client.GetAsync($"/iosmobileapplication/qeydiyyatsizxidmetler/dermanvasiteleri?cypher1={cypher1}&pass={cypher2}");
+            HttpResponseMessage response = await client.GetAsync($"/iosmobileapplication/qeydiyyatsizxidmetler/dermanvasiteleri?cypher1={cypher1}&cypher2={cypher2}");
 
             // this result string should be something like: "{"token":"rgh2ghgdsfds"}"
             var result = await response.Content.ReadAsStringAsync();
@@ -350,6 +350,34 @@ namespace ESehiyye.model
             catch
             {
 
+                return jsonDe;
+            }
+
+        }
+        public async System.Threading.Tasks.Task<ObservableCollection<NewsStruct>> getNews(string cypher1, string cypher2)
+        {
+            var client = new HttpClient();
+            client.BaseAddress = new Uri("https://eservice.e-health.gov.az");
+            HttpResponseMessage response = await client.GetAsync($"/iosmobileapplication/news/newslist?cypher1={cypher1}&cypher2={cypher2}");
+
+            // this result string should be something like: "{"token":"rgh2ghgdsfds"}"
+            var result = await response.Content.ReadAsStringAsync();
+            ObservableCollection<NewsStruct> jsonDe = new ObservableCollection<NewsStruct>();
+            try
+            {
+                jsonDe = JsonConvert.DeserializeObject<ObservableCollection<NewsStruct>>(result);
+                List<Cypher> cypher;
+                cypher = await getCyphers(cypher1, cypher2);
+
+                Preferences.Set("cypher2", cypher[0].cypher);
+
+                return jsonDe;
+
+
+            }
+            catch (Exception ex)
+            {
+                string a = ex.Message;
                 return jsonDe;
             }
 

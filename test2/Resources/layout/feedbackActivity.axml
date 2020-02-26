@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    
+    xmlns:android="http://schemas.android.com/apk/res/android"
     	xmlns:app="http://schemas.android.com/apk/res-auto"
+    
     android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
       <FrameLayout
         android:id="@+id/progressBarHolder"
@@ -9,7 +12,8 @@
         android:alpha="0.4"
         android:background="#000000"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:padding="36dp">
 
         <ProgressBar
             style="?android:attr/progressBarStyleLarge"
@@ -47,11 +51,13 @@
 
     </android.support.v7.widget.Toolbar>
     <LinearLayout
+        android:layout_marginBottom="56dp"
         android:weightSum="2"
         android:orientation="vertical"
            android:layout_width="match_parent"
            android:layout_height="match_parent">
     <TextView
+           android:id="@+id/feedbackTxt"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
                android:layout_marginRight="20dp"
@@ -64,7 +70,7 @@
            android:layout_width="match_parent"
            android:layout_height="match_parent"/>
     <Button
-            
+            android:onClick="sendFeedback"
             android:layout_margin="10dp"
             android:background="@drawable/bluegradient"
             android:textColor="@android:color/white"

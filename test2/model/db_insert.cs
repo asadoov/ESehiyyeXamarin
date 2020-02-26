@@ -82,6 +82,23 @@ namespace ESehiyye.model
 
 
         }
+        public async System.Threading.Tasks.Task<string> sendFeedback(string cypher1, string cypher2,string feedback)
+        {
+            var client = new HttpClient();
+            client.BaseAddress = new Uri("https://eservice.e-health.gov.az");
+            HttpResponseMessage response = await client.GetAsync($"/iosmobileapplication/feedback/insert?cypher1={cypher1}&cypher2={cypher2}&text={feedback}");
+
+
+            var result = await response.Content.ReadAsStringAsync();
+
+            cypher = await select.getCyphers(cypher1, cypher2);
+            Preferences.Set("cypher2", cypher[0].cypher);
+            return result;
+
+
+
+
+        }
 
     }
 }

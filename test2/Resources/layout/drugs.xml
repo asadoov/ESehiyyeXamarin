@@ -6,7 +6,9 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-      <FrameLayout
+      <include
+         layout="@layout/toolbar"/>
+    <FrameLayout
         android:id="@+id/progressBarHolder"
         android:animateLayoutChanges="true"
         android:visibility="gone"
@@ -22,41 +24,9 @@
             android:indeterminate="true"
             android:layout_gravity="center" />
     </FrameLayout>
-      <android.support.v7.widget.Toolbar
-		android:id="@+id/toolbar2"
-        android:background="@drawable/navbarheader"
-		android:layout_width="match_parent"
-		android:layout_height="?attr/actionBarSize"
-		app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-		app:layout_collapseMode="pin"
-       
-                >
-        <RelativeLayout
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content" >
-
-     <TextView
-         android:id="@+id/toolbar_title"
-                
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_centerHorizontal="true"
-         android:layout_centerVertical="true"
-         android:text="Dərman vasitələri"
-         android:textColor="@android:color/white"
-        
-                android:textSize="25dp"
-                />
-
-
-
-     </RelativeLayout>
-
-	</android.support.v7.widget.Toolbar>
-    
     <SearchView
      
-        android:queryHint="Müəssisənin adı..."
+        android:queryHint="Dərmanın adı..."
 
 		android:minWidth="25px"
 		android:minHeight="25px"

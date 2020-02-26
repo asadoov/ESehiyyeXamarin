@@ -22,6 +22,9 @@ namespace ESehiyye
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.SignUpActivity);
 
+            FindViewById<TextView>(Resource.Id.toolbarTitle).Text = "Qeydiyyat";
+            FindViewById<ImageButton>(Resource.Id.backBtn).Visibility = ViewStates.Visible;
+
             webview = FindViewById<Android.Webkit.WebView>(Resource.Id.signUp); //new Android.Webkit.WebView(this);
             webview.Settings.JavaScriptEnabled = true;
             webview.Settings.AllowUniversalAccessFromFileURLs = true;
@@ -40,6 +43,15 @@ namespace ESehiyye
             webview.SetWebChromeClient(new Android.Webkit.WebChromeClient());
 
             // Create your application here
+        }
+        [Java.Interop.Export("backClicked")]
+        public void backClicked(View v)
+        {
+
+
+            OnBackPressed();
+            //Toast.MakeText(ApplicationContext, "esdasad", ToastLength.Long).Show();
+
         }
     }
 }

@@ -23,6 +23,10 @@ namespace ESehiyye
 
             // Create your application here
             SetContentView(Resource.Layout.immunity);
+
+            FindViewById<TextView>(Resource.Id.toolbarTitle).Text = "İmmunoprofilaktika";
+            FindViewById<ImageButton>(Resource.Id.backBtn).Visibility = ViewStates.Visible;
+
             immunity_list = new List<string>();
             immunity_list.AddRange(new string[] {"Doğumdan sonra 12 saat ərzində",
            "4-7-ci gün",
@@ -112,6 +116,15 @@ namespace ESehiyye
             alertDialog.Show();
 
             FindViewById<FrameLayout>(Resource.Id.progressBarHolder).Visibility = ViewStates.Gone;
+        }
+        [Java.Interop.Export("backClicked")]
+        public void backClicked(View v)
+        {
+
+
+            OnBackPressed();
+            //Toast.MakeText(ApplicationContext, "esdasad", ToastLength.Long).Show();
+
         }
     }
 }

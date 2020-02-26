@@ -54,16 +54,16 @@ namespace ESehiyye
             }
             TextView textView1 = view.FindViewById<TextView>(Resource.Id.first_ln);
             textView1.Text = list[position].AD;
-
+            view.FindViewById<TextView>(Resource.Id.drugDescription).Text = list[position].BPA_DOZA;
             switch (list[position].QEYDIYYAT_NOMRE)
             {
 
                 case "Yenidən qeydiyyat prosedurundadır":
-                    view.FindViewById<ImageView>(Resource.Id.imageView1).SetImageResource(Resource.Drawable.warning);
+                    view.FindViewById<ImageView>(Resource.Id.imageView1).SetImageResource(Resource.Drawable.warningIco);
 
                     break;
                 default:
-                    view.FindViewById<ImageView>(Resource.Id.imageView1).SetImageResource(Resource.Drawable.@checked);
+                    view.FindViewById<ImageView>(Resource.Id.imageView1).SetImageResource(Resource.Drawable.checkedIco);
 
                     break;
             }

@@ -23,6 +23,11 @@ namespace ESehiyye
 
             // Create your application here
             SetContentView(Resource.Layout.settings);
+            FindViewById<TextView>(Resource.Id.toolbarTitle).Text = "Parametrlər";
+            FindViewById<ImageButton>(Resource.Id.backBtn).Visibility = ViewStates.Visible;
+            FindViewById<Button>(Resource.Id.log_out).Visibility = ViewStates.Visible;
+
+        
             FindViewById<Button>(Resource.Id.log_out).Click += delegate
             {
                 FinishAffinity();
@@ -33,6 +38,15 @@ namespace ESehiyye
                 StartActivity(main);
           
             };
+        }
+        [Java.Interop.Export("backClicked")]
+        public void backClicked(View v)
+        {
+
+
+            OnBackPressed();
+            //Toast.MakeText(ApplicationContext, "esdasad", ToastLength.Long).Show();
+
         }
     }
 }

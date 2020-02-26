@@ -24,6 +24,7 @@
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <AndroidSupportedAbis>armeabi-v7a;x86;arm64-v8a;x86_64</AndroidSupportedAbis>
+    <ReleaseVersion>0.2</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -48,6 +49,7 @@
     <LangVersion>latestmajor</LangVersion>
     <MandroidI18n />
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+    <AndroidPackageFormat>aab</AndroidPackageFormat>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -78,36 +80,38 @@
     <Compile Include="model\Cypher.cs" />
     <Compile Include="Controller\axtarish_param.cs" />
     <Compile Include="Controller\drugs.cs" />
-    <Compile Include="Controller\elektron_xidmetler_adapter.cs" />
     <Compile Include="Controller\emergency.cs" />
     <Compile Include="Controller\ExidmetActivity.cs" />
     <Compile Include="Controller\hekimler.cs" />
     <Compile Include="Controller\immunity.cs" />
-    <Compile Include="Controller\institutions_adapter.cs" />
     <Compile Include="Controller\institutions_info.cs" />
-    <Compile Include="Controller\LanguageAdapter.cs" />
     <Compile Include="Controller\MainActivity.cs" />
     <Compile Include="Controller\muessiseler.cs" />
     <Compile Include="Controller\patient_hospital_requests.cs" />
-    <Compile Include="Controller\patient_hospital_requests_adapter.cs" />
     <Compile Include="Controller\posient_details.cs" />
-    <Compile Include="Controller\posient_details_list_adapter.cs" />
     <Compile Include="Controller\posient_details_params.cs" />
     <Compile Include="Controller\posient_details_start.cs" />
     <Compile Include="Controller\ProfileActivity.cs" />
     <Compile Include="Controller\randevu.cs" />
     <Compile Include="Controller\randevu_creator.cs" />
     <Compile Include="Controller\randevu_patients.cs" />
-    <Compile Include="Controller\randevu_patients_adapter.cs" />
     <Compile Include="Controller\Regionlar.cs" />
     <Compile Include="Controller\settings.cs" />
     <Compile Include="Controller\SignUpActivity.cs" />
     <Compile Include="Controller\StartSearch.cs" />
     <Compile Include="Controller\survey.cs" />
-    <Compile Include="Controller\surveys_adapter.cs" />
     <Compile Include="Controller\verification_code_check.cs" />
     <Compile Include="Controller\vezifeler.cs" />
-    <Compile Include="Controller\feedbackActivity.cs" />
+    <Compile Include="Controller\NewsAdapter.cs" />
+    <Compile Include="model\NewsStruct.cs" />
+    <Compile Include="Controller\PasswordRecoveryActivity.cs" />
+    <Compile Include="Controller\Adapters\elektron_xidmetler_adapter.cs" />
+    <Compile Include="Controller\Adapters\institutions_adapter.cs" />
+    <Compile Include="Controller\Adapters\LanguageAdapter.cs" />
+    <Compile Include="Controller\Adapters\patient_hospital_requests_adapter.cs" />
+    <Compile Include="Controller\Adapters\posient_details_list_adapter.cs" />
+    <Compile Include="Controller\Adapters\randevu_patients_adapter.cs" />
+    <Compile Include="Controller\Adapters\surveys_adapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -329,19 +333,7 @@
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\warning.png">
-      <SubType>
-      </SubType>
-      <Generator>
-      </Generator>
-    </AndroidResource>
     <AndroidResource Include="Resources\drawable\unchecked.png">
-      <SubType>
-      </SubType>
-      <Generator>
-      </Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\checked.png">
       <SubType>
       </SubType>
       <Generator>
@@ -420,6 +412,26 @@
       <Generator></Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\newsActivity.axml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\news_item.axml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\checkedIco.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\warningIco.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\PasswordRecoveryActivity.axml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\toolbar.xml">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
@@ -515,6 +527,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controller\" />
+    <Folder Include="Controller\Adapters\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
