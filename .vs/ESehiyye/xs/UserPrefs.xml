@@ -1,29 +1,29 @@
 ﻿<Properties StartupConfiguration="{DCEC58C5-131E-4C80-AC28-613B3917AF6F}|Default">
-  <MonoDevelop.Ide.ItemProperties.ESehiyye AndroidDesignerPreferredTheme="Theme.AppCompat.Light" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.ESehiyye AndroidDesignerPreferredTheme="AppTheme" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="test2/Controller/MainActivity.cs">
     <Files>
-      <File FileName="test2/Controller/MainActivity.cs" Line="128" Column="90" />
-      <File FileName="test2/Resources/layout/activity_main.axml" Line="101" Column="37" />
-      <File FileName="test2/Resources/values/colors.xml" Line="3" Column="1" />
+      <File FileName="test2/Resources/layout/activity_main.axml" Line="4" Column="53" />
+      <File FileName="test2/Resources/layout/newsActivity.axml" />
+      <File FileName="test2/Resources/layout/news_item.axml" />
+      <File FileName="test2/Resources/layout/ProfileActivity.axml" />
+      <File FileName="test2/Controller/NewsFragment.cs" />
+      <File FileName="test2/Resources/layout/ProfileFragment.axml" />
       <File FileName="test2/Resources/values/strings.xml" Line="1" Column="1" />
       <File FileName="test2/Resources/values/styles.xml" Line="1" Column="1" />
-      <File FileName="test2/Resources/values/ic_launcher_background.xml" Line="1" Column="1" />
-      <File FileName="test2/Resources/layout/ProfileActivity.axml" Line="14" Column="11" />
-      <File FileName="test2/Controller/ProfileActivity.cs" Line="92" Column="117" />
-      <File FileName="test2/Resources/layout/doctors.axml" Line="27" Column="52" />
-      <File FileName="test2/Resources/layout/toolbar.xml" Line="36" Column="12" />
-      <File FileName="test2/model/db_select.cs" Line="49" Column="63" />
+      <File FileName="test2/Controller/MainActivity.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ESehiyye" expanded="True">
-            <Node name="ESehiyye" expanded="True" selected="True">
-              <Node name="Packages" expanded="True" />
+            <Node name="ESehiyye" expanded="True">
               <Node name="adapters" expanded="True" />
-              <Node name="Controller" expanded="True" />
+              <Node name="Controller" expanded="True">
+                <Node name="MainActivity.cs" selected="True" />
+              </Node>
               <Node name="model" expanded="True" />
               <Node name="Resources" expanded="True">
+                <Node name="drawable" expanded="True" />
                 <Node name="layout" expanded="True" />
                 <Node name="values" expanded="True" />
               </Node>
@@ -37,9 +37,7 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <Debugger.DebugSourceFolders />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/rufat/Desktop/ESehiyyeAndroid/test2/model/db_select.cs" relfile="test2/model/db_select.cs" line="50" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

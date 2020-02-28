@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="2" android:versionName="1.0" package="rr.ESehiyye">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="3" android:versionName="1.0" package="rr.ESehiyye">
   <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="28" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <uses-permission android:name="android.permission.INTERNET" />
@@ -22,7 +22,6 @@
     <activity android:label="posient_details" android:name="crc6416569d5f2715f55e.posient_details" />
     <activity android:label="posient_details_params" android:name="crc6416569d5f2715f55e.posient_details_params" />
     <activity android:label="posient_start_search" android:name="crc6416569d5f2715f55e.posient_details_start" />
-    <activity android:label="ProfileActivity" android:name="crc6416569d5f2715f55e.ProfileActivity" />
     <activity android:label="randevu" android:name="crc6416569d5f2715f55e.randevu" />
     <activity android:label="randevu_creator" android:name="crc6416569d5f2715f55e.randevu_creator" />
     <activity android:label="randevus" android:name="crc6416569d5f2715f55e.randevu_patients" />
@@ -33,6 +32,7 @@
     <activity android:label="survey" android:name="crc6416569d5f2715f55e.survey" />
     <activity android:label="verification_code_check" android:name="crc6416569d5f2715f55e.verification_code_check" />
     <activity android:label="ixtisaslar" android:name="crc6416569d5f2715f55e.vezifeler" />
+    <activity android:label="ProfileActivity" android:name="crc6416569d5f2715f55e.ProfileActivity" />
     <activity android:label="PasswordRecoveryActivity" android:name="crc645e2ce133bca87054.PasswordRecoveryActivity" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="1999999999" android:authorities="rr.ESehiyye.mono.MonoRuntimeProvider.__mono_init__" />
     <!--suppress ExportedReceiver-->

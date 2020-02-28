@@ -91,7 +91,6 @@
     <Compile Include="Controller\posient_details.cs" />
     <Compile Include="Controller\posient_details_params.cs" />
     <Compile Include="Controller\posient_details_start.cs" />
-    <Compile Include="Controller\ProfileActivity.cs" />
     <Compile Include="Controller\randevu.cs" />
     <Compile Include="Controller\randevu_creator.cs" />
     <Compile Include="Controller\randevu_patients.cs" />
@@ -112,6 +111,9 @@
     <Compile Include="Controller\Adapters\posient_details_list_adapter.cs" />
     <Compile Include="Controller\Adapters\randevu_patients_adapter.cs" />
     <Compile Include="Controller\Adapters\surveys_adapter.cs" />
+    <Compile Include="model\FeedbackStatusStruct.cs" />
+    <Compile Include="Controller\ProfileActivity.cs" />
+    <Compile Include="Controller\NewsFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -432,6 +434,10 @@
       <Generator></Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\toolbar.xml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ProfileFragment.axml">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>

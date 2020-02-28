@@ -9,6 +9,7 @@ android.support.design.widget.BottomNavigationView;obj/Release/res/layout/survey
 android.support.design.widget.CollapsingToolbarLayout;obj/Release/res/layout/profileactivity.xml
 android.support.design.widget.CoordinatorLayout;obj/Release/res/layout/activity_emergency.xml
 android.support.design.widget.CoordinatorLayout;obj/Release/res/layout/profileactivity.xml
+android.support.design.widget.TextInputLayout;obj/Release/res/layout/activity_main.xml
 android.support.v4.widget.NestedScrollView;obj/Release/res/layout/profileactivity.xml
 android.support.v7.widget.GridLayout;obj/Release/res/layout/details_item.xml
 android.support.v7.widget.GridLayout;obj/Release/res/layout/elektron_xidmetler_item.xml
@@ -34,7 +35,9 @@ android.support.v7.widget.Toolbar;obj/Release/res/layout/randevu_creator.xml
 android.support.v7.widget.Toolbar;obj/Release/res/layout/randevu_patients.xml
 android.support.v7.widget.Toolbar;obj/Release/res/layout/regionlar.xml
 android.support.v7.widget.Toolbar;obj/Release/res/layout/settings.xml
+android.support.v7.widget.Toolbar;obj/Release/res/layout/signupactivity.xml
 android.support.v7.widget.Toolbar;obj/Release/res/layout/surveys.xml
+android.support.v7.widget.Toolbar;obj/Release/res/layout/toolbar.xml
 android.support.v7.widget.Toolbar;obj/Release/res/layout/vezifeler.xml
 android.webkit.WebView;obj/Release/res/layout/passwordrecoveryactivity.xml
 android.webkit.WebView;obj/Release/res/layout/signupactivity.xml
@@ -49,6 +52,7 @@ Button;obj/Release/res/layout/posient_details_start.xml
 Button;obj/Release/res/layout/profileactivity.xml
 Button;obj/Release/res/layout/settings.xml
 Button;obj/Release/res/layout/startsearch.xml
+Button;obj/Release/res/layout/toolbar.xml
 cache-path;/Users/rufat/Desktop/ESehiyyeAndroid/test2/obj/Release/lp/37/jl/res/xml/xamarin_essentials_fileprovider_file_paths.xml
 color;obj/Release/res/values/colors.xml
 color;obj/Release/res/values/ic_launcher_background.xml
@@ -60,6 +64,7 @@ corners;obj/Release/res/drawable/signinheader.xml
 declare-styleable;/Users/rufat/Desktop/ESehiyyeAndroid/test2/obj/Release/lp/0/jl/res/values/values.xml
 EditText;obj/Release/res/layout/activity_main.xml
 EditText;obj/Release/res/layout/axtarish_param.xml
+EditText;obj/Release/res/layout/feedbackactivity.xml
 EditText;obj/Release/res/layout/posient_details_params.xml
 EditText;obj/Release/res/layout/verification_code_check.xml
 external-cache-path;/Users/rufat/Desktop/ESehiyyeAndroid/test2/obj/Release/lp/37/jl/res/xml/xamarin_essentials_fileprovider_file_paths.xml
@@ -77,9 +82,11 @@ FrameLayout;obj/Release/res/layout/muessiseler.xml
 FrameLayout;obj/Release/res/layout/newsactivity.xml
 FrameLayout;obj/Release/res/layout/patient_hospital_requests.xml
 FrameLayout;obj/Release/res/layout/posient_details.xml
+FrameLayout;obj/Release/res/layout/profileactivity.xml
 FrameLayout;obj/Release/res/layout/randevu.xml
 FrameLayout;obj/Release/res/layout/randevu_patients.xml
 FrameLayout;obj/Release/res/layout/regionlar.xml
+FrameLayout;obj/Release/res/layout/signupactivity.xml
 FrameLayout;obj/Release/res/layout/surveys.xml
 FrameLayout;obj/Release/res/layout/verification_code_check.xml
 FrameLayout;obj/Release/res/layout/vezifeler.xml
@@ -90,10 +97,16 @@ gradient;obj/Release/res/drawable/navbarheader.xml
 gradient;obj/Release/res/drawable/signinheader.xml
 gradient;obj/Release/res/drawable/verification_check_gradient.xml
 ImageButton;obj/Release/res/layout/newsactivity.xml
+ImageButton;obj/Release/res/layout/toolbar.xml
 ImageView;obj/Release/res/layout/activity_main.xml
 ImageView;obj/Release/res/layout/drugs_item.xml
 ImageView;obj/Release/res/layout/randevu_patient_item.xml
+include;obj/Release/res/layout/drugs.xml
+include;obj/Release/res/layout/immunity.xml
+include;obj/Release/res/layout/passwordrecoveryactivity.xml
 include;obj/Release/res/layout/profileactivity.xml
+include;obj/Release/res/layout/settings.xml
+include;obj/Release/res/layout/signupactivity.xml
 item;obj/Release/res/drawable/verification_check_gradient.xml
 item;obj/Release/res/menu/bottom_nav.xml
 item;obj/Release/res/menu/profile_menu.xml
@@ -116,6 +129,7 @@ LinearLayout;obj/Release/res/layout/patient_hospital_requests.xml
 LinearLayout;obj/Release/res/layout/posient_details.xml
 LinearLayout;obj/Release/res/layout/posient_details_params.xml
 LinearLayout;obj/Release/res/layout/posient_details_start.xml
+LinearLayout;obj/Release/res/layout/profilefragment.xml
 LinearLayout;obj/Release/res/layout/randevu.xml
 LinearLayout;obj/Release/res/layout/randevu_creator.xml
 LinearLayout;obj/Release/res/layout/randevu_patients.xml
@@ -124,6 +138,7 @@ LinearLayout;obj/Release/res/layout/settings.xml
 LinearLayout;obj/Release/res/layout/signupactivity.xml
 LinearLayout;obj/Release/res/layout/startsearch.xml
 LinearLayout;obj/Release/res/layout/surveys.xml
+LinearLayout;obj/Release/res/layout/toolbar.xml
 LinearLayout;obj/Release/res/layout/verification_code_check.xml
 LinearLayout;obj/Release/res/layout/vezifeler.xml
 ListView;obj/Release/res/layout/doctors.xml
@@ -155,9 +170,11 @@ ProgressBar;obj/Release/res/layout/muessiseler.xml
 ProgressBar;obj/Release/res/layout/newsactivity.xml
 ProgressBar;obj/Release/res/layout/patient_hospital_requests.xml
 ProgressBar;obj/Release/res/layout/posient_details.xml
+ProgressBar;obj/Release/res/layout/profileactivity.xml
 ProgressBar;obj/Release/res/layout/randevu.xml
 ProgressBar;obj/Release/res/layout/randevu_patients.xml
 ProgressBar;obj/Release/res/layout/regionlar.xml
+ProgressBar;obj/Release/res/layout/signupactivity.xml
 ProgressBar;obj/Release/res/layout/surveys.xml
 ProgressBar;obj/Release/res/layout/verification_code_check.xml
 ProgressBar;obj/Release/res/layout/vezifeler.xml
@@ -177,6 +194,7 @@ RelativeLayout;obj/Release/res/layout/randevu_patients.xml
 RelativeLayout;obj/Release/res/layout/regionlar.xml
 RelativeLayout;obj/Release/res/layout/settings.xml
 RelativeLayout;obj/Release/res/layout/surveys.xml
+RelativeLayout;obj/Release/res/layout/toolbar.xml
 RelativeLayout;obj/Release/res/layout/vezifeler.xml
 resources;/Users/rufat/Desktop/ESehiyyeAndroid/test2/obj/Release/lp/0/jl/res/values/values.xml
 resources;obj/Release/res/values/colors.xml
@@ -231,5 +249,6 @@ TextView;obj/Release/res/layout/settings.xml
 TextView;obj/Release/res/layout/startsearch.xml
 TextView;obj/Release/res/layout/surveys.xml
 TextView;obj/Release/res/layout/surveys_item.xml
+TextView;obj/Release/res/layout/toolbar.xml
 TextView;obj/Release/res/layout/verification_code_check.xml
 TextView;obj/Release/res/layout/vezifeler.xml

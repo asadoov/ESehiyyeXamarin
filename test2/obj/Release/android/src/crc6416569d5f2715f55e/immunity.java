@@ -11,6 +11,7 @@ public class immunity
 	static {
 		__md_methods = 
 			"n_onCreate:(Landroid/os/Bundle;)V:GetOnCreate_Landroid_os_Bundle_Handler\n" +
+			"n_backClicked:(Landroid/view/View;)V:__export__\n" +
 			"";
 		mono.android.Runtime.register ("ESehiyye.immunity, test2", immunity.class, __md_methods);
 	}
@@ -30,6 +31,14 @@ public class immunity
 	}
 
 	private native void n_onCreate (android.os.Bundle p0);
+
+
+	public void backClicked (android.view.View p0)
+	{
+		n_backClicked (p0);
+	}
+
+	private native void n_backClicked (android.view.View p0);
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)

@@ -82,7 +82,7 @@ namespace ESehiyye.model
 
 
         }
-        public async System.Threading.Tasks.Task<string> sendFeedback(string cypher1, string cypher2,string feedback)
+        public async System.Threading.Tasks.Task<List<FeedbackStatusStruct>> sendFeedback(string cypher1, string cypher2,string feedback)
         {
             var client = new HttpClient();
             client.BaseAddress = new Uri("https://eservice.e-health.gov.az");
@@ -90,10 +90,12 @@ namespace ESehiyye.model
 
 
             var result = await response.Content.ReadAsStringAsync();
+            List<FeedbackStatusStruct> jsonDe = JsonConvert.DeserializeObject<List<FeedbackStatusStruct>>(result);
 
+            
             cypher = await select.getCyphers(cypher1, cypher2);
             Preferences.Set("cypher2", cypher[0].cypher);
-            return result;
+            return jsonDe;
 
 
 

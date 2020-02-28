@@ -21,7 +21,6 @@ android.support.v7.widget.GridLayout;obj/Debug/res/layout/verification_code_chec
 android.support.v7.widget.Toolbar;obj/Debug/res/layout/axtarish_param.xml
 android.support.v7.widget.Toolbar;obj/Debug/res/layout/doctors.xml
 android.support.v7.widget.Toolbar;obj/Debug/res/layout/elektron_xidmetler.xml
-android.support.v7.widget.Toolbar;obj/Debug/res/layout/feedbackactivity.xml
 android.support.v7.widget.Toolbar;obj/Debug/res/layout/institutions_info.xml
 android.support.v7.widget.Toolbar;obj/Debug/res/layout/muessiseler.xml
 android.support.v7.widget.Toolbar;obj/Debug/res/layout/patient_hospital_requests.xml
@@ -59,6 +58,7 @@ corners;obj/Debug/res/drawable/signinheader.xml
 declare-styleable;/Users/rufat/Desktop/ESehiyyeAndroid/test2/obj/Debug/lp/0/jl/res/values/values.xml
 EditText;obj/Debug/res/layout/activity_main.xml
 EditText;obj/Debug/res/layout/axtarish_param.xml
+EditText;obj/Debug/res/layout/feedbackactivity.xml
 EditText;obj/Debug/res/layout/posient_details_params.xml
 EditText;obj/Debug/res/layout/verification_code_check.xml
 external-cache-path;/Users/rufat/Desktop/ESehiyyeAndroid/test2/obj/Debug/lp/37/jl/res/xml/xamarin_essentials_fileprovider_file_paths.xml
@@ -69,7 +69,6 @@ FrameLayout;obj/Debug/res/layout/activity_main.xml
 FrameLayout;obj/Debug/res/layout/doctors.xml
 FrameLayout;obj/Debug/res/layout/drugs.xml
 FrameLayout;obj/Debug/res/layout/elektron_xidmetler.xml
-FrameLayout;obj/Debug/res/layout/feedbackactivity.xml
 FrameLayout;obj/Debug/res/layout/immunity.xml
 FrameLayout;obj/Debug/res/layout/institutions_info.xml
 FrameLayout;obj/Debug/res/layout/muessiseler.xml
@@ -95,7 +94,6 @@ ImageView;obj/Debug/res/layout/drugs_item.xml
 ImageView;obj/Debug/res/layout/randevu_patient_item.xml
 include;obj/Debug/res/layout/drugs.xml
 include;obj/Debug/res/layout/immunity.xml
-include;obj/Debug/res/layout/newsactivity.xml
 include;obj/Debug/res/layout/passwordrecoveryactivity.xml
 include;obj/Debug/res/layout/profileactivity.xml
 include;obj/Debug/res/layout/settings.xml
@@ -122,6 +120,7 @@ LinearLayout;obj/Debug/res/layout/patient_hospital_requests.xml
 LinearLayout;obj/Debug/res/layout/posient_details.xml
 LinearLayout;obj/Debug/res/layout/posient_details_params.xml
 LinearLayout;obj/Debug/res/layout/posient_details_start.xml
+LinearLayout;obj/Debug/res/layout/profilefragment.xml
 LinearLayout;obj/Debug/res/layout/randevu.xml
 LinearLayout;obj/Debug/res/layout/randevu_creator.xml
 LinearLayout;obj/Debug/res/layout/randevu_patients.xml
@@ -155,7 +154,6 @@ ProgressBar;obj/Debug/res/layout/activity_main.xml
 ProgressBar;obj/Debug/res/layout/doctors.xml
 ProgressBar;obj/Debug/res/layout/drugs.xml
 ProgressBar;obj/Debug/res/layout/elektron_xidmetler.xml
-ProgressBar;obj/Debug/res/layout/feedbackactivity.xml
 ProgressBar;obj/Debug/res/layout/immunity.xml
 ProgressBar;obj/Debug/res/layout/institutions_info.xml
 ProgressBar;obj/Debug/res/layout/muessiseler.xml
@@ -173,7 +171,6 @@ refractored.controls.CircleImageView;obj/Debug/res/layout/profileactivity.xml
 RelativeLayout;obj/Debug/res/layout/axtarish_param.xml
 RelativeLayout;obj/Debug/res/layout/doctors.xml
 RelativeLayout;obj/Debug/res/layout/elektron_xidmetler.xml
-RelativeLayout;obj/Debug/res/layout/feedbackactivity.xml
 RelativeLayout;obj/Debug/res/layout/muessiseler.xml
 RelativeLayout;obj/Debug/res/layout/patient_hospital_requests.xml
 RelativeLayout;obj/Debug/res/layout/posient_details_params.xml
@@ -216,7 +213,6 @@ TextView;obj/Debug/res/layout/doctors.xml
 TextView;obj/Debug/res/layout/drugs_item.xml
 TextView;obj/Debug/res/layout/elektron_xidmetler.xml
 TextView;obj/Debug/res/layout/elektron_xidmetler_item.xml
-TextView;obj/Debug/res/layout/feedbackactivity.xml
 TextView;obj/Debug/res/layout/institutions_info.xml
 TextView;obj/Debug/res/layout/muessiseler.xml
 TextView;obj/Debug/res/layout/news_item.xml

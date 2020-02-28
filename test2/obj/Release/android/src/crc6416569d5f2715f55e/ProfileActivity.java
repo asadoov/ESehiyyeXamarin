@@ -11,7 +11,7 @@ public class ProfileActivity
 	static {
 		__md_methods = 
 			"n_onCreate:(Landroid/os/Bundle;)V:GetOnCreate_Landroid_os_Bundle_Handler\n" +
-			"n_backToNews:(Landroid/view/View;)V:__export__\n" +
+			"n_backClicked:(Landroid/view/View;)V:__export__\n" +
 			"n_onCreateOptionsMenu:(Landroid/view/Menu;)Z:GetOnCreateOptionsMenu_Landroid_view_Menu_Handler\n" +
 			"n_onOptionsItemSelected:(Landroid/view/MenuItem;)Z:GetOnOptionsItemSelected_Landroid_view_MenuItem_Handler\n" +
 			"n_onBackPressed:()V:GetOnBackPressedHandler\n" +
@@ -39,12 +39,12 @@ public class ProfileActivity
 	private native void n_onCreate (android.os.Bundle p0);
 
 
-	public void backToNews (android.view.View p0)
+	public void backClicked (android.view.View p0)
 	{
-		n_backToNews (p0);
+		n_backClicked (p0);
 	}
 
-	private native void n_backToNews (android.view.View p0);
+	private native void n_backClicked (android.view.View p0);
 
 
 	public boolean onCreateOptionsMenu (android.view.Menu p0)

@@ -633,3 +633,7 @@
 /Users/rufat/Desktop/ESehiyyeAndroid/test2/obj/Release/stamp/_GenerateJavaStubs.stamp
 /Users/rufat/Desktop/ESehiyyeAndroid/test2/obj/Release/stamp/_GeneratePackageManagerJava.stamp
 /Users/rufat/Desktop/ESehiyyeAndroid/test2/obj/Release/stamp/_ResolveLibraryProjectImports.stamp
+/Users/rufat/Desktop/ESehiyyeAndroid/test2/obj/Release/ESehiyye.csprojAssemblyReference.cache
+/Users/rufat/Desktop/ESehiyyeAndroid/test2/obj/Release/res/layout/toolbar.xml
+/Users/rufat/Desktop/ESehiyyeAndroid/test2/obj/Release/res/layout/profilefragment.xml
+/Users/rufat/Desktop/ESehiyyeAndroid/test2/obj/Release/android/src/crc645e2ce133bca87054/NewsFragment.java

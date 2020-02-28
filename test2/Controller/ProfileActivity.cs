@@ -24,10 +24,13 @@ namespace ESehiyye
     [Activity(Label = "ProfileActivity")]
     public class ProfileActivity : AppCompatActivity
     {
+        db_insert insert = new db_insert();
+        List<FeedbackStatusStruct> feedbackStatusList = new List<FeedbackStatusStruct>();
         ObservableCollection<model.NewsStruct> newsList = new ObservableCollection<model.NewsStruct>();
         ObservableCollection<model.NewsStruct> filteredNewsList = new ObservableCollection<model.NewsStruct>();
         NewsAdapter newsAdapter;
         model.db_select select = new model.db_select();
+        List<model.users> user_data;
         //bool newsClicked = false;
         Android.App.AlertDialog.Builder alertDialog;
         protected override void OnCreate(Bundle savedInstanceState)
@@ -36,6 +39,7 @@ namespace ESehiyye
             base.OnCreate(savedInstanceState);
             // Create your application here
             SetContentView(Resource.Layout.ProfileActivity);
+
             if (Preferences.Get("user_data", "") != "")
             {
 
@@ -44,7 +48,7 @@ namespace ESehiyye
                 SetSupportActionBar(toolbar);
 
                 SupportActionBar.SetDisplayHomeAsUpEnabled(false);
-                List<model.users> user_data = new List<model.users>();
+              user_data = new List<model.users>();
                 user_data = JsonConvert.DeserializeObject<List<model.users>>(Preferences.Get("user_data", ""));
                 if (user_data[0].STATUS != "tibbkadr")
                 {
@@ -85,7 +89,10 @@ namespace ESehiyye
                      switch (e.Item.ItemId)
                      {
                          case Resource.Id.feedback:
-                            // Finish();
+                             // Finish();
+
+                             FindViewById<TextView>(Resource.Id.toolbarTitle).Text = "Əks əlaqə";
+                             FindViewById<LinearLayout>(Resource.Id.toolbarLayout).Visibility = ViewStates.Visible;
                              FindViewById<LinearLayout>(Resource.Id.feedback).Visibility = ViewStates.Visible;
                              FindViewById<LinearLayout>(Resource.Id.news).Visibility = ViewStates.Gone;
                              FindViewById<AppBarLayout>(Resource.Id.appbar).Visibility = ViewStates.Gone;
@@ -96,7 +103,7 @@ namespace ESehiyye
                              break;
                          case Resource.Id.news:
 
-
+                             FindViewById<LinearLayout>(Resource.Id.toolbarLayout).Visibility = ViewStates.Visible;
                              FindViewById<FrameLayout>(Resource.Id.progressBarHolder).Visibility = ViewStates.Visible;
                              FindViewById<LinearLayout>(Resource.Id.news).Visibility = ViewStates.Visible;
                              FindViewById<TextView>(Resource.Id.toolbarTitle).Text = "Xəbərlər";
@@ -133,6 +140,7 @@ namespace ESehiyye
                              FindViewById<FrameLayout>(Resource.Id.progressBarHolder).Visibility = ViewStates.Gone;
                              break;
                          case Resource.Id.profile:
+                             FindViewById<LinearLayout>(Resource.Id.toolbarLayout).Visibility = ViewStates.Gone;
                              FindViewById<AppBarLayout>(Resource.Id.appbar).Visibility = ViewStates.Visible;
                              FindViewById<NestedScrollView>(Resource.Id.profileScroll).Visibility = ViewStates.Visible;
                              FindViewById<LinearLayout>(Resource.Id.news).Visibility = ViewStates.Gone;
@@ -187,6 +195,7 @@ namespace ESehiyye
             FindViewById<ListView>(Resource.Id.newsList).Visibility = ViewStates.Gone;
             FindViewById<TextView>(Resource.Id.newsDetailedDescription).Visibility = ViewStates.Visible;
             FindViewById<ImageButton>(Resource.Id.backBtn).Visibility = ViewStates.Visible;
+           
             if (filteredNewsList.Count>0)
             {
                 FindViewById<TextView>(Resource.Id.toolbarTitle).Text = filteredNewsList[e.Position].NAME;
@@ -284,13 +293,53 @@ namespace ESehiyye
 
         }
         [Java.Interop.Export("sendFeedback")]
-        public void sendFeedback(View v)
+        public async void sendFeedback(View v)
         {
-
+            FindViewById<FrameLayout>(Resource.Id.progressBarHolder).Visibility = ViewStates.Visible;
+            v.Enabled = false;
             string feedbackTxt = FindViewById<TextView>(Resource.Id.feedbackTxt).Text;
             if (feedbackTxt.Length > 5 && !string.IsNullOrEmpty(feedbackTxt))
             {
+               
+                TextView feedbackTextView = FindViewById<TextView>(Resource.Id.feedbackTxt);
 
+                feedbackStatusList = await insert.sendFeedback(Preferences.Get("cypher1", "").ToString(), Preferences.Get("cypher2", "").ToString(), feedbackTextView.Text);
+                if (feedbackStatusList.Count > 0)
+                {
+                    if (Convert.ToInt32(feedbackStatusList[0].RESULT) == 1)
+                    {
+                        alertDialog = new Android.App.AlertDialog.Builder(this);
+                        alertDialog.SetTitle("Bildiriş");
+                        alertDialog.SetMessage($"Sorğunuz qəbul olundu. 24 saat ərzində e-mail ünvanınıza ({user_data[0].EMAIL}) cavablandırılacaq");
+                        //alertDialog.SetPositiveButton("Tamam", delegate
+                        //{
+                        //    alertDialog.Dispose();
+                        //});
+                        alertDialog.Show();
+                    }
+                    else
+                    {
+                        alertDialog = new Android.App.AlertDialog.Builder(this);
+                        alertDialog.SetTitle("Xəta");
+                        alertDialog.SetMessage("Biraz sonra yenidən cəht edin");
+                        //alertDialog.SetPositiveButton("Tamam", delegate
+                        //{
+                        //    alertDialog.Dispose();
+                        //});
+                        alertDialog.Show();
+                    }
+                }
+                else
+                {
+                    alertDialog = new Android.App.AlertDialog.Builder(this);
+                    alertDialog.SetTitle("Xəta");
+                    alertDialog.SetMessage("Biraz sonra yenidən cəht edin");
+                    //alertDialog.SetPositiveButton("Tamam", delegate
+                    //{
+                    //    alertDialog.Dispose();
+                    //});
+                    alertDialog.Show();
+                }
             }
             else
             {
@@ -304,9 +353,11 @@ namespace ESehiyye
                 alertDialog.Show();
             }
 
-
+            FindViewById<FrameLayout>(Resource.Id.progressBarHolder).Visibility = ViewStates.Gone;
+            v.Enabled = true;
         }
 
+       
 
     }
 }
